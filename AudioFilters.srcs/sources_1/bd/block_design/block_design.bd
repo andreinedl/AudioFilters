@@ -423,11 +423,29 @@
           "C_I_LMB": {
             "value": "1"
           },
+          "C_NUMBER_OF_PC_BRK": {
+            "value": "4"
+          },
+          "C_NUMBER_OF_RD_ADDR_BRK": {
+            "value": "1"
+          },
+          "C_NUMBER_OF_WR_ADDR_BRK": {
+            "value": "1"
+          },
+          "C_OPTIMIZATION": {
+            "value": "0"
+          },
           "C_USE_DCACHE": {
             "value": "1"
           },
+          "C_USE_FPU": {
+            "value": "0"
+          },
           "C_USE_ICACHE": {
             "value": "1"
+          },
+          "C_USE_MULDIV": {
+            "value": "2"
           }
         },
         "interface_ports": {
@@ -832,6 +850,10 @@
               "M07_AXI"
             ],
             "bd_attributes": {
+              "BRIDGES": {
+                "value": "M00_AXI:M01_AXI:M02_AXI:M03_AXI:M04_AXI:M05_AXI:M06_AXI:M07_AXI",
+                "value_src": "auto"
+              },
               "TYPE": {
                 "value": "interior",
                 "value_src": "default"
@@ -861,6 +883,10 @@
               "M07_AXI"
             ],
             "bd_attributes": {
+              "BRIDGES": {
+                "value": "M00_AXI:M01_AXI:M02_AXI:M03_AXI:M04_AXI:M05_AXI:M06_AXI:M07_AXI",
+                "value_src": "auto"
+              },
               "TYPE": {
                 "value": "interior",
                 "value_src": "default"
@@ -890,6 +916,10 @@
               "M07_AXI"
             ],
             "bd_attributes": {
+              "BRIDGES": {
+                "value": "M00_AXI:M01_AXI:M02_AXI:M03_AXI:M04_AXI:M05_AXI:M06_AXI:M07_AXI",
+                "value_src": "auto"
+              },
               "TYPE": {
                 "value": "interior",
                 "value_src": "default"
@@ -919,6 +949,10 @@
               "M07_AXI"
             ],
             "bd_attributes": {
+              "BRIDGES": {
+                "value": "M00_AXI:M01_AXI:M02_AXI:M03_AXI:M04_AXI:M05_AXI:M06_AXI:M07_AXI",
+                "value_src": "auto"
+              },
               "TYPE": {
                 "value": "interior",
                 "value_src": "default"
@@ -948,6 +982,10 @@
               "M07_AXI"
             ],
             "bd_attributes": {
+              "BRIDGES": {
+                "value": "M00_AXI:M01_AXI:M02_AXI:M03_AXI:M04_AXI:M05_AXI:M06_AXI:M07_AXI",
+                "value_src": "auto"
+              },
               "TYPE": {
                 "value": "interior",
                 "value_src": "default"
@@ -977,6 +1015,10 @@
               "M07_AXI"
             ],
             "bd_attributes": {
+              "BRIDGES": {
+                "value": "M00_AXI:M01_AXI:M02_AXI:M03_AXI:M04_AXI:M05_AXI:M06_AXI:M07_AXI",
+                "value_src": "auto"
+              },
               "TYPE": {
                 "value": "interior",
                 "value_src": "default"

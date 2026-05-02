@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1777676170">
+<GenRun Id="impl_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1777717552">
   <File Type="PA-TCL" Name="block_design_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="block_design_wrapper_reports.tcl"/>
   <File Type="INIT-TIMING" Name="block_design_wrapper_timing_summary_init.rpt"/>
@@ -168,9 +168,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -181,19 +179,7 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="block_design_dlmb_v10_0"/>
   <BlockFileSet Type="BlockSrcs" Name="block_design_PmodOLED_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="block_design_microblaze_riscv_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="block_design_ilmb_bram_if_cntlr_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="block_design_mdm_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="block_design_microblaze_riscv_0_axi_intc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="block_design_ilmb_v10_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="block_design_dlmb_bram_if_cntlr_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="block_design_lmb_bram_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="block_design_axi_dma_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="block_design_axi_iic_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="block_design_rst_clk_wiz_1_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="block_design_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="block_design_mig_7series_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="block_design_d_axi_i2s_audio_0_0"/>
 </GenRun>

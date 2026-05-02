@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
--- Date        : Sat May  2 00:29:34 2026
+-- Date        : Sat May  2 00:29:33 2026
 -- Host        : SPACESHIP running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_rst_clk_wiz_1_100M_0/block_design_rst_clk_wiz_1_100M_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top block_design_rst_clk_wiz_1_100M_0 -prefix
+--               block_design_rst_clk_wiz_1_100M_0_ block_design_rst_clk_wiz_1_100M_0_stub.vhdl
 -- Design      : block_design_rst_clk_wiz_1_100M_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a200tsbg484-1

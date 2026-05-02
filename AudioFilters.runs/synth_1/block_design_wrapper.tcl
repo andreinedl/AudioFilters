@@ -58,7 +58,7 @@ if {$::dispatch::connected} {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param general.usePosixSpawnForFork 1
 set_param chipscope.maxJobs 3
-set_msg_config -id {Common 17-41} -limit 10000000
+set_param bd.open.in_stealth_mode 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a200tsbg484-1
 
@@ -81,7 +81,7 @@ set_property ip_output_repo d:/Vivado/AudioFilters/AudioFilters.cache/ip [curren
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/hdl/block_design_wrapper.v
+read_verilog -library xil_defaultlib D:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/hdl/block_design_wrapper.v
 add_files D:/Vivado/AudioFilters/AudioFilters.srcs/sources_1/bd/block_design/block_design.bd
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0_ooc_debug.xdc]

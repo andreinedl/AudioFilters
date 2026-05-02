@@ -97,7 +97,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -107,6 +106,7 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param general.usePosixSpawnForFork 1
   set_param chipscope.maxJobs 3
+  set_param bd.open.in_stealth_mode 1
   set_param runs.launchOptions { -jobs 6  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a200tsbg484-1
@@ -118,7 +118,7 @@ OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir D:/Vivado/AudioFilters/AudioFilters.cache/wt [current_project]
   set_property parent.project_path D:/Vivado/AudioFilters/AudioFilters.xpr [current_project]
   set_property ip_repo_paths {
-  d:/Vivado/AudioFilters/vivado-library
+  D:/Vivado/AudioFilters/vivado-library
   D:/Vivado/AudioFilters/AudioFilters.ipdefs/repo/local/ip/d_axi_i2s_audio_v2_0
 } [current_project]
   update_ip_catalog

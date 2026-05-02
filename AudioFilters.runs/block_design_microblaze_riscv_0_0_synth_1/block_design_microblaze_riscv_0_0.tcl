@@ -57,6 +57,8 @@ if {$::dispatch::connected} {
 
 OPTRACE "block_design_microblaze_riscv_0_0_synth_1" START { ROLLUP_AUTO }
 set_param general.usePosixSpawnForFork 1
+set_param chipscope.maxJobs 3
+set_param bd.open.in_stealth_mode 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -72,13 +74,16 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:nexys_video:part0:1.2 [current_project]
-set_property ip_repo_paths d:/Vivado/AudioFilters/vivado-library [current_project]
+set_property ip_repo_paths {
+  d:/Vivado/AudioFilters/vivado-library
+  d:/Vivado/AudioFilters/AudioFilters.ipdefs/repo/local/ip/d_axi_i2s_audio_v2_0
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo d:/Vivado/AudioFilters/AudioFilters.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/Vivado/AudioFilters/AudioFilters.srcs/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xci
+read_ip -quiet D:/Vivado/AudioFilters/AudioFilters.srcs/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xci
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0_ooc_debug.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0_ooc.xdc]
