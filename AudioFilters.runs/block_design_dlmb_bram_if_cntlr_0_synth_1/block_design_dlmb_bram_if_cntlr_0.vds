@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat May  2 00:26:21 2026
+# Process ID         : 17732
+# Current directory  : D:/Vivado/AudioFilters/AudioFilters.runs/block_design_dlmb_bram_if_cntlr_0_synth_1
+# Command line       : vivado.exe -log block_design_dlmb_bram_if_cntlr_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source block_design_dlmb_bram_if_cntlr_0.tcl
+# Log file           : D:/Vivado/AudioFilters/AudioFilters.runs/block_design_dlmb_bram_if_cntlr_0_synth_1/block_design_dlmb_bram_if_cntlr_0.vds
+# Journal file       : D:/Vivado/AudioFilters/AudioFilters.runs/block_design_dlmb_bram_if_cntlr_0_synth_1\vivado.jou
+# Running On         : SPACESHIP
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 5 7535HS with Radeon Graphics        
+# CPU Frequency      : 3294 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 16438 MB
+# Swap memory        : 22899 MB
+# Total Virtual      : 39338 MB
+# Available Virtual  : 6049 MB
+#-----------------------------------------------------------
+source block_design_dlmb_bram_if_cntlr_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:17 . Memory (MB): peak = 588.500 ; gain = 257.676
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/AudioFilters/vivado-library'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2025.2/Vivado/data/ip'.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP block_design_dlmb_bram_if_cntlr_0, cache-ID = 5a2f21063a1d1d7b.
+INFO: [Common 17-206] Exiting Vivado at Sat May  2 00:26:50 2026...
