@@ -5,12 +5,18 @@
 #include "xaxidma.h"
 #include "xiic.h"
 #include "xil_io.h"
+#include "xintc.h"
+#include <xaxidma_hw.h>
 #include <xiic_l.h>
+#include <xil_cache.h>
+#include <xil_exception.h>
 #include <xstatus.h>
 
 XAxiDma AxiDma;
 XIic i2c;
 XGpio switches;
+XIntc Intc;
+volatile int rx_done = 0;
 
 //DDR Adresses
 #define SAMPLES_PER_FRAME   1024
@@ -67,25 +73,120 @@ int AudioWriteRegister(u8 RegHigh, u8 RegLow, u8 Data) {
         return XST_FAILURE;
 }
 
-int main() {
-    // sending the i2c init sequence
-    int no_init_cmds = sizeof(Adau1761_Init_Sequence) / sizeof(Adau1761_Init_Sequence[0]);
-    for(int i = 0; i < no_init_cmds; i++) {
-        int status = AudioWriteRegister(Adau1761_Init_Sequence[i][0], 
-                                        Adau1761_Init_Sequence[i][1], 
-                                        Adau1761_Init_Sequence[i][2]);
-        if(status == XST_FAILURE) {
-            xil_printf("Failure in sending the I2C command: %x, %x, %x", 
-                        Adau1761_Init_Sequence[i][0],
-                        Adau1761_Init_Sequence[i][1],
-                        Adau1761_Init_Sequence[i][2]);
+int ConfigAndInit_DMA(){
+    XAxiDma_Config* Cfg_Ptr = XAxiDma_LookupConfig(XPAR_AXI_DMA_0_BASEADDR);
+    if(!Cfg_Ptr)
+    {
+        xil_printf("Unable to find DMA configuration.\r\n");
+        return XST_FAILURE;
+    }
+    
+    int status = XAxiDma_CfgInitialize(&AxiDma, Cfg_Ptr);
+    if(status != XST_SUCCESS)
+    {
+        xil_printf("Unable to initialize DMA engine.\r\n");
+        return XST_FAILURE;
+    }
+    
+    XAxiDma_IntrEnable(&AxiDma, XAXIDMA_IRQ_IOC_MASK, XAXIDMA_DEVICE_TO_DMA);
+    return XST_SUCCESS;
+}
 
+int Send_i2c_init_sequence(u8 sequence [] [3], int no_commands)
+{
+    for(int i = 0; i < no_commands; i++)
+    {
+        int status = AudioWriteRegister(sequence[i][0],
+                                        sequence[i][1],
+                                        sequence[i][2]);
+        if(status != XST_SUCCESS)
+        {
+            xil_printf("Failed to send the I2C command: %x, %x, %x",
+                                                        sequence[i][0],
+                                                        sequence[i][1],
+                                                        sequence[i][2]);
             return XST_FAILURE;
         }
     }
+    return XST_SUCCESS;
+}
+
+void DMA_RX_Handler(void *CallbackRef)
+{
+    XAxiDma *AxiDmaInst = (XAxiDma *)CallbackRef;
+    u32 IrqStatus;
+
+    IrqStatus = XAxiDma_IntrGetIrq(AxiDmaInst, XAXIDMA_DEVICE_TO_DMA);
+    
+    XAxiDma_IntrAckIrq(AxiDmaInst, IrqStatus, XAXIDMA_DEVICE_TO_DMA); //interrupt acknowledge
+    
+    rx_done = 1;
+}
+
+int Init_INTC()
+{
+    int status = XIntc_Initialize(&Intc, XPAR_MICROBLAZE_RISCV_0_AXI_INTC_BASEADDR);
+    if(status == XST_FAILURE)
+    {
+        xil_printf("Unable to initialize Interrupt Controller.\r\n");
+        return XST_FAILURE;
+    }
+    
+    status = XIntc_SelfTest(&Intc);
+    if(status == XST_FAILURE)
+    {
+        xil_printf("Interrupt Controller Self Test failed.\r\n");
+        return XST_FAILURE;
+    }
+    
+    status = XIntc_Connect(&Intc, XPAR_FABRIC_AXI_DMA_0_INTR, (XInterruptHandler)DMA_RX_Handler, &AxiDma);
+    if(status == XST_FAILURE)
+    {
+        xil_printf("Unable to connect interrupt handler to DMA.\r\n");
+        return XST_FAILURE;
+    }
+
+    status = XIntc_Start(&Intc, XIN_REAL_MODE);
+    if(status == XST_FAILURE)
+    {
+        xil_printf("Unable to start interrupt controller.\r\n");
+        return XST_FAILURE;
+    }
+    
+    XIntc_Enable(&Intc, XPAR_FABRIC_AXI_DMA_0_INTR);
+
+    Xil_ExceptionInit();
+    Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler)XIntc_InterruptHandler, &Intc);
+    Xil_ExceptionEnable();
+    return XST_SUCCESS;
+}
+
+int main() {
+    // sending the i2c init sequence
+    int no_init_cmds = sizeof(Adau1761_Init_Sequence) / sizeof(Adau1761_Init_Sequence[0]);
+    Send_i2c_init_sequence(Adau1761_Init_Sequence, no_init_cmds);
     
     Xil_Out32(XPAR_D_AXI_I2S_AUDIO_0_BASEADDR, 1);
+    //Initializing the DMA engine
+    ConfigAndInit_DMA();
+    //Initializing the Interrupt Controller
+    Init_INTC();
     
-    return 0; 
+    xil_printf("System successfully initialized.\r\n");
+
+    Xil_DCacheDisable();
+    XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)RX_BUFF_BASE, SAMPLES_PER_FRAME * 4, XAXIDMA_DEVICE_TO_DMA);
+
+    while(1)
+    {    if(rx_done == 1)
+        {
+            rx_done = 0;
+            
+            int* rx_buffer_ptr = (int*)RX_BUFF_BASE;
+            int current_sample = rx_buffer_ptr[0];
+            xil_printf("Sample: %d\r\n", current_sample);
+            XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)RX_BUFF_BASE, SAMPLES_PER_FRAME * 4, XAXIDMA_DEVICE_TO_DMA);
+        }
+    }
 }
 
