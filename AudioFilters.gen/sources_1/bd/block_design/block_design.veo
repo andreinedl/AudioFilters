@@ -100,7 +100,9 @@ block_design your_instance_name (
   .BCLK_O(BCLK_O), // output wire [0:0] BCLK_O
   .LRCLK_O(LRCLK_O), // output wire [0:0] LRCLK_O
   .SDATA_O(SDATA_O), // output wire [0:0] SDATA_O
-  .MCLK_O(MCLK_O) // output wire MCLK_O
+  .MCLK_O(MCLK_O), // output wire MCLK_O
+  .usb_uart_rxd(usb_uart_rxd), // input wire usb_uart_rxd
+  .usb_uart_txd(usb_uart_txd) // output wire usb_uart_txd
 );
 // INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

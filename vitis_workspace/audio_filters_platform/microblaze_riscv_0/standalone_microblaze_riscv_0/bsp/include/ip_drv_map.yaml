@@ -10,6 +10,9 @@ axi_gpio_0:
 axi_iic_0:
 - axi_iic
 - iic
+axi_uartlite_0:
+- axi_uartlite
+- uartlite
 d_axi_i2s_audio_0:
 - d_axi_i2s_audio
 - None

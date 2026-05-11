@@ -13,5 +13,6 @@
   "domainRealName": "standalone_microblaze_riscv_0",
   "useSysrootToolchain": false,
   "applicationFlow": "EMBEDDED",
+  "template": "empty_application",
   "templateFlow": "VITIS"
 }

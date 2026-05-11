@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-//Date        : Sat May  2 13:25:21 2026
+//Date        : Mon May 11 16:26:22 2026
 //Host        : SPACESHIP running 64-bit major release  (build 9200)
 //Command     : generate_target block_design.bd
 //Design      : block_design
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "block_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=block_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=18,numReposBlks=17,numNonXlnxBlks=2,numHierBlks=1,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=12,da_board_cnt=7,da_microblaze_riscv_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "block_design.hwdef" *) 
+(* CORE_GENERATION_INFO = "block_design,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=block_design,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=19,numReposBlks=18,numNonXlnxBlks=2,numHierBlks=1,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=13,da_board_cnt=8,da_microblaze_riscv_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "block_design.hwdef" *) 
 module block_design
    (BCLK_O,
     LRCLK_O,
@@ -58,7 +58,9 @@ module block_design
     oled_pin9_o,
     oled_pin9_t,
     reset,
-    sys_clk_i);
+    sys_clk_i,
+    usb_uart_rxd,
+    usb_uart_txd);
   output [0:0]BCLK_O;
   output [0:0]LRCLK_O;
   output MCLK_O;
@@ -106,6 +108,8 @@ module block_design
   (* X_INTERFACE_INFO = "digilentinc.com:interface:pmod:1.0 oled PIN9_T" *) output oled_pin9_t;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input reset;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLK_I CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLK_I, CLK_DOMAIN block_design_sys_clk_i, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input sys_clk_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 usb_uart RxD" *) (* X_INTERFACE_MODE = "Master" *) input usb_uart_rxd;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 usb_uart TxD" *) output usb_uart_txd;
 
   wire \^BCLK_O ;
   wire \^LRCLK_O ;
@@ -410,6 +414,23 @@ module block_design
   wire microblaze_riscv_0_axi_periph_M07_AXI_WREADY;
   wire [3:0]microblaze_riscv_0_axi_periph_M07_AXI_WSTRB;
   wire microblaze_riscv_0_axi_periph_M07_AXI_WVALID;
+  wire [3:0]microblaze_riscv_0_axi_periph_M08_AXI_ARADDR;
+  wire microblaze_riscv_0_axi_periph_M08_AXI_ARREADY;
+  wire microblaze_riscv_0_axi_periph_M08_AXI_ARVALID;
+  wire [3:0]microblaze_riscv_0_axi_periph_M08_AXI_AWADDR;
+  wire microblaze_riscv_0_axi_periph_M08_AXI_AWREADY;
+  wire microblaze_riscv_0_axi_periph_M08_AXI_AWVALID;
+  wire microblaze_riscv_0_axi_periph_M08_AXI_BREADY;
+  wire [1:0]microblaze_riscv_0_axi_periph_M08_AXI_BRESP;
+  wire microblaze_riscv_0_axi_periph_M08_AXI_BVALID;
+  wire [31:0]microblaze_riscv_0_axi_periph_M08_AXI_RDATA;
+  wire microblaze_riscv_0_axi_periph_M08_AXI_RREADY;
+  wire [1:0]microblaze_riscv_0_axi_periph_M08_AXI_RRESP;
+  wire microblaze_riscv_0_axi_periph_M08_AXI_RVALID;
+  wire [31:0]microblaze_riscv_0_axi_periph_M08_AXI_WDATA;
+  wire microblaze_riscv_0_axi_periph_M08_AXI_WREADY;
+  wire [3:0]microblaze_riscv_0_axi_periph_M08_AXI_WSTRB;
+  wire microblaze_riscv_0_axi_periph_M08_AXI_WVALID;
   wire microblaze_riscv_0_debug_CAPTURE;
   wire microblaze_riscv_0_debug_CLK;
   wire microblaze_riscv_0_debug_DISABLE;
@@ -483,6 +504,8 @@ module block_design
   wire rst_clk_wiz_1_100M_mb_reset;
   wire [0:0]rst_clk_wiz_1_100M_peripheral_aresetn;
   wire sys_clk_i;
+  wire usb_uart_rxd;
+  wire usb_uart_txd;
 
   assign BCLK_O[0] = \^BCLK_O ;
   assign LRCLK_O[0] = \^LRCLK_O ;
@@ -690,6 +713,28 @@ module block_design
         .sda_i(iic_rtl_sda_i),
         .sda_o(iic_rtl_sda_o),
         .sda_t(iic_rtl_sda_t));
+  block_design_axi_uartlite_0_0 axi_uartlite_0
+       (.rx(usb_uart_rxd),
+        .s_axi_aclk(microblaze_riscv_0_Clk),
+        .s_axi_araddr(microblaze_riscv_0_axi_periph_M08_AXI_ARADDR),
+        .s_axi_aresetn(rst_clk_wiz_1_100M_peripheral_aresetn),
+        .s_axi_arready(microblaze_riscv_0_axi_periph_M08_AXI_ARREADY),
+        .s_axi_arvalid(microblaze_riscv_0_axi_periph_M08_AXI_ARVALID),
+        .s_axi_awaddr(microblaze_riscv_0_axi_periph_M08_AXI_AWADDR),
+        .s_axi_awready(microblaze_riscv_0_axi_periph_M08_AXI_AWREADY),
+        .s_axi_awvalid(microblaze_riscv_0_axi_periph_M08_AXI_AWVALID),
+        .s_axi_bready(microblaze_riscv_0_axi_periph_M08_AXI_BREADY),
+        .s_axi_bresp(microblaze_riscv_0_axi_periph_M08_AXI_BRESP),
+        .s_axi_bvalid(microblaze_riscv_0_axi_periph_M08_AXI_BVALID),
+        .s_axi_rdata(microblaze_riscv_0_axi_periph_M08_AXI_RDATA),
+        .s_axi_rready(microblaze_riscv_0_axi_periph_M08_AXI_RREADY),
+        .s_axi_rresp(microblaze_riscv_0_axi_periph_M08_AXI_RRESP),
+        .s_axi_rvalid(microblaze_riscv_0_axi_periph_M08_AXI_RVALID),
+        .s_axi_wdata(microblaze_riscv_0_axi_periph_M08_AXI_WDATA),
+        .s_axi_wready(microblaze_riscv_0_axi_periph_M08_AXI_WREADY),
+        .s_axi_wstrb(microblaze_riscv_0_axi_periph_M08_AXI_WSTRB),
+        .s_axi_wvalid(microblaze_riscv_0_axi_periph_M08_AXI_WVALID),
+        .tx(usb_uart_txd));
   block_design_d_axi_i2s_audio_0_0 d_axi_i2s_audio_0
        (.AXI_L_aclk(microblaze_riscv_0_Clk),
         .AXI_L_araddr(microblaze_riscv_0_axi_periph_M02_AXI_ARADDR),
@@ -1036,6 +1081,23 @@ module block_design
         .M07_AXI_wready(microblaze_riscv_0_axi_periph_M07_AXI_WREADY),
         .M07_AXI_wstrb(microblaze_riscv_0_axi_periph_M07_AXI_WSTRB),
         .M07_AXI_wvalid(microblaze_riscv_0_axi_periph_M07_AXI_WVALID),
+        .M08_AXI_araddr(microblaze_riscv_0_axi_periph_M08_AXI_ARADDR),
+        .M08_AXI_arready(microblaze_riscv_0_axi_periph_M08_AXI_ARREADY),
+        .M08_AXI_arvalid(microblaze_riscv_0_axi_periph_M08_AXI_ARVALID),
+        .M08_AXI_awaddr(microblaze_riscv_0_axi_periph_M08_AXI_AWADDR),
+        .M08_AXI_awready(microblaze_riscv_0_axi_periph_M08_AXI_AWREADY),
+        .M08_AXI_awvalid(microblaze_riscv_0_axi_periph_M08_AXI_AWVALID),
+        .M08_AXI_bready(microblaze_riscv_0_axi_periph_M08_AXI_BREADY),
+        .M08_AXI_bresp(microblaze_riscv_0_axi_periph_M08_AXI_BRESP),
+        .M08_AXI_bvalid(microblaze_riscv_0_axi_periph_M08_AXI_BVALID),
+        .M08_AXI_rdata(microblaze_riscv_0_axi_periph_M08_AXI_RDATA),
+        .M08_AXI_rready(microblaze_riscv_0_axi_periph_M08_AXI_RREADY),
+        .M08_AXI_rresp(microblaze_riscv_0_axi_periph_M08_AXI_RRESP),
+        .M08_AXI_rvalid(microblaze_riscv_0_axi_periph_M08_AXI_RVALID),
+        .M08_AXI_wdata(microblaze_riscv_0_axi_periph_M08_AXI_WDATA),
+        .M08_AXI_wready(microblaze_riscv_0_axi_periph_M08_AXI_WREADY),
+        .M08_AXI_wstrb(microblaze_riscv_0_axi_periph_M08_AXI_WSTRB),
+        .M08_AXI_wvalid(microblaze_riscv_0_axi_periph_M08_AXI_WVALID),
         .S00_AXI_araddr(microblaze_riscv_0_axi_dp_ARADDR),
         .S00_AXI_arprot(microblaze_riscv_0_axi_dp_ARPROT),
         .S00_AXI_arready(microblaze_riscv_0_axi_dp_ARREADY),

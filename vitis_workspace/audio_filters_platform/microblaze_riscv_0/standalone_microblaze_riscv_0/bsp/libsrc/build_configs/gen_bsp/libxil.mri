@@ -1,8 +1,0 @@
-create libxil.a
-addlib D:/Vivado/AudioFilters/vitis_workspace/audio_filters_platform/microblaze_riscv_0/standalone_microblaze_riscv_0/bsp/libsrc/build_configs/gen_bsp/libsrc/intc/src/libintc.a
-addlib D:/Vivado/AudioFilters/vitis_workspace/audio_filters_platform/microblaze_riscv_0/standalone_microblaze_riscv_0/bsp/libsrc/build_configs/gen_bsp/libsrc/iic/src/libiic.a
-addlib D:/Vivado/AudioFilters/vitis_workspace/audio_filters_platform/microblaze_riscv_0/standalone_microblaze_riscv_0/bsp/libsrc/build_configs/gen_bsp/libsrc/gpio/src/libgpio.a
-addlib D:/Vivado/AudioFilters/vitis_workspace/audio_filters_platform/microblaze_riscv_0/standalone_microblaze_riscv_0/bsp/libsrc/build_configs/gen_bsp/libsrc/bram/src/libbram.a
-addlib D:/Vivado/AudioFilters/vitis_workspace/audio_filters_platform/microblaze_riscv_0/standalone_microblaze_riscv_0/bsp/libsrc/build_configs/gen_bsp/libsrc/axidma/src/libaxidma.a
-save
-end

@@ -25,7 +25,6 @@ collector_create (PROJECT_LIB_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}")
 # Add subdirectory dependency if available
 
 collector_list (_headers PROJECT_LIB_HEADERS)
-collector_list (_sources PROJECT_LIB_SOURCES)
 
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR} current_dir_sources)
 list(APPEND _sources ${current_dir_sources})

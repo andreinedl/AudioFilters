@@ -99,7 +99,9 @@ COMPONENT block_design
     BCLK_O : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     LRCLK_O : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     SDATA_O : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-    MCLK_O : OUT STD_LOGIC
+    MCLK_O : OUT STD_LOGIC;
+    usb_uart_rxd : IN STD_LOGIC;
+    usb_uart_txd : OUT STD_LOGIC
   );
 END COMPONENT;
 -- COMP_TAG_END ------  End cut for COMPONENT Declaration  ------
@@ -156,7 +158,9 @@ your_instance_name : block_design
     BCLK_O => BCLK_O,
     LRCLK_O => LRCLK_O,
     SDATA_O => SDATA_O,
-    MCLK_O => MCLK_O
+    MCLK_O => MCLK_O,
+    usb_uart_rxd => usb_uart_rxd,
+    usb_uart_txd => usb_uart_txd
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

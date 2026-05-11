@@ -61,13 +61,13 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "D:/Vivado/AudioFilters/vitis_workspace/audio_filters_platform/microblaze_riscv_0/standalone_microblaze_riscv_0/bsp/include/../include")
+   "D:\Vivado\AudioFilters\vitis_workspace\audio_filters_platform\microblaze_riscv_0\standalone_microblaze_riscv_0\bsp\include/../include")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "D:/Vivado/AudioFilters/vitis_workspace/audio_filters_platform/microblaze_riscv_0/standalone_microblaze_riscv_0/bsp/include/.." TYPE DIRECTORY MESSAGE_LAZY FILES "D:/Vivado/AudioFilters/vitis_workspace/audio_filters_platform/microblaze_riscv_0/standalone_microblaze_riscv_0/bsp/libsrc/build_configs/gen_bsp/include")
+  file(INSTALL DESTINATION "D:\Vivado\AudioFilters\vitis_workspace\audio_filters_platform\microblaze_riscv_0\standalone_microblaze_riscv_0\bsp\include/.." TYPE DIRECTORY MESSAGE_LAZY FILES "D:/Vivado/AudioFilters/vitis_workspace/audio_filters_platform/microblaze_riscv_0/standalone_microblaze_riscv_0/bsp/libsrc/build_configs/gen_bsp/include")
 endif()
 

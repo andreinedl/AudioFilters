@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-//Date        : Sat May  2 13:25:22 2026
+//Date        : Mon May 11 16:26:22 2026
 //Host        : SPACESHIP running 64-bit major release  (build 9200)
 //Command     : generate_target block_design_wrapper.bd
 //Design      : block_design_wrapper
@@ -41,7 +41,9 @@ module block_design_wrapper
     oled_pin8_io,
     oled_pin9_io,
     reset,
-    sys_clk_i);
+    sys_clk_i,
+    usb_uart_rxd,
+    usb_uart_txd);
   output [0:0]BCLK_O;
   output [0:0]LRCLK_O;
   output MCLK_O;
@@ -73,6 +75,8 @@ module block_design_wrapper
   inout oled_pin9_io;
   input reset;
   input sys_clk_i;
+  input usb_uart_rxd;
+  output usb_uart_txd;
 
   wire [0:0]BCLK_O;
   wire [0:0]LRCLK_O;
@@ -129,6 +133,8 @@ module block_design_wrapper
   wire oled_pin9_t;
   wire reset;
   wire sys_clk_i;
+  wire usb_uart_rxd;
+  wire usb_uart_txd;
 
   block_design block_design_i
        (.BCLK_O(BCLK_O),
@@ -177,7 +183,9 @@ module block_design_wrapper
         .oled_pin9_o(oled_pin9_o),
         .oled_pin9_t(oled_pin9_t),
         .reset(reset),
-        .sys_clk_i(sys_clk_i));
+        .sys_clk_i(sys_clk_i),
+        .usb_uart_rxd(usb_uart_rxd),
+        .usb_uart_txd(usb_uart_txd));
   IOBUF iic_rtl_scl_iobuf
        (.I(iic_rtl_scl_o),
         .IO(iic_rtl_scl_io),

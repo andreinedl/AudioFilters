@@ -57,8 +57,6 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param general.usePosixSpawnForFork 1
-set_param chipscope.maxJobs 3
-set_param bd.open.in_stealth_mode 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a200tsbg484-1
 
@@ -173,6 +171,12 @@ set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_axi_periph_0/bd_0/ip/ip_105/bd_22f9_m07awn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_axi_periph_0/bd_0/ip/ip_106/bd_22f9_m07wn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_axi_periph_0/bd_0/ip/ip_107/bd_22f9_m07bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_axi_periph_0/bd_0/ip/ip_109/bd_22f9_m08s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_axi_periph_0/bd_0/ip/ip_110/bd_22f9_m08arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_axi_periph_0/bd_0/ip/ip_111/bd_22f9_m08rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_axi_periph_0/bd_0/ip/ip_112/bd_22f9_m08awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_axi_periph_0/bd_0/ip/ip_113/bd_22f9_m08wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_axi_periph_0/bd_0/ip/ip_114/bd_22f9_m08bn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_axi_periph_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_axi_periph_0/smartconnect.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_axi_intc_0/block_design_microblaze_riscv_0_axi_intc_0.xdc]
@@ -185,16 +189,16 @@ set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mig_7series_0_0/block_design_mig_7series_0_0/user_design/constraints/block_design_mig_7series_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mig_7series_0_0/block_design_mig_7series_0_0/user_design/constraints/block_design_mig_7series_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mig_7series_0_0/block_design_mig_7series_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_pmod_bridge_0_0/PmodOLED_pmod_bridge_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_pmod_bridge_0_0/src/pmod_concat_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/block_design_PmodOLED_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_axi_gpio_0_0/PmodOLED_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_axi_gpio_0_0/PmodOLED_axi_gpio_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_axi_quad_spi_0_0/PmodOLED_axi_quad_spi_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_axi_quad_spi_0_0/PmodOLED_axi_quad_spi_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_axi_quad_spi_0_0/PmodOLED_axi_quad_spi_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_axi_quad_spi_0_0/PmodOLED_axi_quad_spi_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_axi_gpio_0_0/PmodOLED_axi_gpio_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_axi_gpio_0_0/PmodOLED_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_pmod_bridge_0_0/PmodOLED_pmod_bridge_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_pmod_bridge_0_0/src/pmod_concat_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/block_design_PmodOLED_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_dma_0_0/block_design_axi_dma_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_dma_0_0/block_design_axi_dma_0_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_dma_0_0/block_design_axi_dma_0_0_ooc.xdc]
@@ -202,11 +206,13 @@ set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_iic_0_0/block_design_axi_iic_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_gpio_0_0/block_design_axi_gpio_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_gpio_0_0/block_design_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/fifo_4/fifo_4.xdc]
+set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/fifo_4/fifo_4_clocks.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/fifo_32/fifo_32.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/fifo_32/fifo_32_clocks.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/d_axi_i2s_audio.xdc]
-set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/fifo_4/fifo_4.xdc]
-set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/fifo_4/fifo_4_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_uartlite_0_0/block_design_axi_uartlite_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_uartlite_0_0/block_design_axi_uartlite_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/block_design_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/data/riscv_bootloop.elf]
 

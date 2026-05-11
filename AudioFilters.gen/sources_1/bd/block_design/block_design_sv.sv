@@ -146,7 +146,11 @@ module block_design_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire [0:0] SDATA_O,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire MCLK_O
+  output wire MCLK_O,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire usb_uart_rxd,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire usb_uart_txd
 );
 
   block_design inst (
@@ -196,7 +200,9 @@ module block_design_sv (
     .BCLK_O(BCLK_O),
     .LRCLK_O(LRCLK_O),
     .SDATA_O(SDATA_O),
-    .MCLK_O(MCLK_O)
+    .MCLK_O(MCLK_O),
+    .usb_uart_rxd(usb_uart_rxd),
+    .usb_uart_txd(usb_uart_txd)
   );
 
 endmodule

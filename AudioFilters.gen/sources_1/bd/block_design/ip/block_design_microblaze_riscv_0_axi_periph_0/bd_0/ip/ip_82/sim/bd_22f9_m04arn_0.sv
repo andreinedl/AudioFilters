@@ -88,7 +88,7 @@ input wire [5 : 0] s_sc_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC RECV" *)
 output wire [5 : 0] s_sc_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC PAYLD" *)
-input wire [148 : 0] s_sc_payld;
+input wire [149 : 0] s_sc_payld;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 m_sc_aclk CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_sc_aclk, ASSOCIATED_BUSIF M_SC, ASSOCIATED_RESET m_sc_aresetn, ASSOCIATED_CLKEN m_sc_aclken, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0, CLK_DOMAIN block_design_mig_7series_0_0_ui_clk, INSERT_VIP 0" *)
@@ -107,7 +107,7 @@ output wire [0 : 0] m_sc_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC INFO" *)
 output wire [0 : 0] m_sc_info;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC PAYLD" *)
-output wire [148 : 0] m_sc_payld;
+output wire [149 : 0] m_sc_payld;
 
   sc_node_v1_0_19_top #(
     .C_FAMILY("artix7"),
@@ -121,13 +121,13 @@ output wire [148 : 0] m_sc_payld;
     .C_NUM_SI(6),
     .C_NUM_MI(1),
     .C_CHANNEL(2),
-    .C_PAYLD_WIDTH(149),
+    .C_PAYLD_WIDTH(150),
     .C_S_NUM_BYTES_ARRAY(192'H000000040000000400000004000000040000000400000004),
     .C_M_NUM_BYTES_ARRAY(32'H00000004),
     .C_PRIORITY_ARB_ARRAY(6'B000000),
     .C_USER_BITS_PER_BYTE(0),
     .C_ARBITER_MODE(1),
-    .C_SC_ROUTE_WIDTH(8),
+    .C_SC_ROUTE_WIDTH(9),
     .C_ID_WIDTH(3),
     .C_ADDR_WIDTH(32),
     .C_USER_WIDTH(0),

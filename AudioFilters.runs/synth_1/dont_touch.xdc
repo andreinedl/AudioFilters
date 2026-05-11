@@ -54,4 +54,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==block_desig
 # IP: bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==block_design_d_axi_i2s_audio_0_0 || ORIG_REF_NAME==block_design_d_axi_i2s_audio_0_0} -quiet] -quiet
 
+# IP: bd/block_design/ip/block_design_axi_uartlite_0_0/block_design_axi_uartlite_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==block_design_axi_uartlite_0_0 || ORIG_REF_NAME==block_design_axi_uartlite_0_0} -quiet] -quiet
+
 # XDC: d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/block_design_ooc.xdc
