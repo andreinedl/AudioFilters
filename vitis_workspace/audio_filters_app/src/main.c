@@ -18,7 +18,6 @@ XAxiDma AxiDma;
 XIic i2c;
 XGpio switches;
 XIntc Intc;
-
 volatile int rx_done = 0;
 
 //DDR Adresses
@@ -165,8 +164,6 @@ int Init_INTC()
 }
 
 int main() {
-    xil_printf("Code is working");
-
     // sending the i2c init sequence
     int no_init_cmds = sizeof(Adau1761_Init_Sequence) / sizeof(Adau1761_Init_Sequence[0]);
     Send_i2c_init_sequence(Adau1761_Init_Sequence, no_init_cmds);
