@@ -27,15 +27,29 @@ set(USER_UNDEFINED_SYMBOLS
 # Example 3: Adding ${CMAKE_SOURCE_DIR}/data/include to add data/include from this project.
 
 set(USER_INCLUDE_DIRECTORIES
+    "${CMAKE_CURRENT_SOURCE_DIR}"
+    "${CMAKE_CURRENT_SOURCE_DIR}/oled"
 )
 
-#Add any source below, they will be added as Compile sources.
-#Example 1: Adding /proj/data/helloworld.c will pass /proj/data/helloworld.c
-#Example 2: Adding ../../common/helloworld.c will consider the path as relative to this component directory
-#Example 3: Adding ${MY_ENV}/data/helloworld.c are expanded using project-specific environment settings.
-set(USER_COMPILE_SOURCES
-"main.c"
+# Auto-discover all .c files recursively in the src directory.
+# Git-friendly: works on any machine regardless of absolute path.
+# NOTE: If you add new source files, re-run CMake configure (Clean & Build in Vitis).
+file(GLOB_RECURSE USER_COMPILE_SOURCES
+    "${CMAKE_CURRENT_SOURCE_DIR}/*.c"
 )
+
+# OledDriver.c include direct aceste fisiere via #include,
+# deci le excludem din compilare separata ca sa evitam "multiple definition"
+list(REMOVE_ITEM USER_COMPILE_SOURCES
+    "${CMAKE_CURRENT_SOURCE_DIR}/oled/ChrFont0.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/oled/FillPat.c"
+)
+
+# Force re-configure if directory contents change
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+    "${CMAKE_CURRENT_SOURCE_DIR}"
+)
+message(STATUS "[UserConfig] Sources discovered: ${USER_COMPILE_SOURCES}")
 
 # -----------------------------------------
 
@@ -90,6 +104,7 @@ set(USER_COMPILE_VERBOSE )
 set(USER_COMPILE_ANSI )
 set(USER_COMPILE_RELAXATION "-Wl,--no-relax")
 set(USER_COMPILE_GARBAGE "")
+
 # Add any compiler options that are not covered by the above variables, they will be added as extra compiler options
 # To enable profiling -pg [ for gprof ]  or -p [ for prof information ]
 set(USER_COMPILE_OTHER_FLAGS )
@@ -110,7 +125,6 @@ set(USER_LINK_NO_STDLIB )
 # Omit all symbol information. (-s)
 set(USER_LINK_OMIT_ALL_SYMBOL_INFO )
 
-
 # -----------------------------------------
 
 # Add any libraries to be linked below, they will be added as extra libraries.
@@ -126,7 +140,8 @@ set(USER_LINK_DIRECTORIES
 
 # -----------------------------------------
 
-set(USER_LINKER_SCRIPT "${CMAKE_SOURCE_DIR}/lscript.ld")
+# Linker script path - relative to this file, git-friendly
+set(USER_LINKER_SCRIPT "${CMAKE_CURRENT_SOURCE_DIR}/lscript.ld")
 
 # Add linker options to be passed, they will be added as extra linker options
 # Example : Adding -s will pass -s to the linker.
@@ -160,7 +175,6 @@ endforeach()
 
 # Process USER_LINK_DIRECTORIES to generate proper -L flags
 if(USER_LINK_DIRECTORIES)
-    # Convert list to string with proper -L flag formatting
     string(REPLACE ";" "\" -L\"" _formatted_dirs "${USER_LINK_DIRECTORIES}")
     set(USER_LINK_DIRECTORIES "${_formatted_dirs}")
 endif()
