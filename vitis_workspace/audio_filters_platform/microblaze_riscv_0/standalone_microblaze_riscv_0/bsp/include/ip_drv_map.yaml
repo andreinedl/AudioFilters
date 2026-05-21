@@ -1,0 +1,24 @@
+PmodOLED_0:
+- PmodOLED
+- None
+axi_dma_0:
+- axi_dma
+- axidma
+axi_gpio_0:
+- axi_gpio
+- gpio
+axi_iic_0:
+- axi_iic
+- iic
+axi_uartlite_0:
+- axi_uartlite
+- uartlite
+d_axi_i2s_audio_0:
+- d_axi_i2s_audio
+- None
+microblaze_riscv_0_axi_intc:
+- axi_intc
+- intc
+microblaze_riscv_0_local_memory_dlmb_bram_if_cntlr:
+- lmb_bram_if_cntlr
+- bram

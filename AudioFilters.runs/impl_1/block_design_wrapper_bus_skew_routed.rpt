@@ -1,0 +1,1063 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Mon May 11 16:52:49 2026
+| Host         : SPACESHIP running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file block_design_wrapper_bus_skew_routed.rpt -pb block_design_wrapper_bus_skew_routed.pb -rpx block_design_wrapper_bus_skew_routed.rpx
+| Design       : block_design_wrapper
+| Device       : 7a200t-sbg484
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+Table of Contents
+-----------------
+1. Bus Skew Report Summary
+2. Bus Skew Report Per Constraint
+
+1. Bus Skew Report Summary
+--------------------------
+
+Id  Position  From                            To                              Corner  Requirement(ns)  Actual(ns)  Slack(ns)
+--  --------  ------------------------------  ------------------------------  ------  ---------------  ----------  ---------
+1   198       [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]}]]
+                                              [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
+                                                                              Slow             10.000       0.705      9.295
+2   200       [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]}]]
+                                              [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
+                                                                              Slow             10.000       0.763      9.237
+3   202       [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]}]]
+                                              [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
+                                                                              Slow             10.000       0.869      9.131
+4   204       [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]}]]
+                                              [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
+                                                                              Slow             10.000       1.057      8.943
+5   206       [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]}]]
+                                              [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
+                                                                              Slow             10.000       0.989      9.011
+6   208       [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]}]]
+                                              [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]]
+                                                                              Slow             10.000       1.039      8.961
+
+
+2. Bus Skew Report Per Constraint
+---------------------------------
+
+Id: 1
+set_bus_skew -from [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]}]] -to [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]] 10.000
+Requirement: 10.000ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clkout0               clk_pll_i             block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                            block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                                                                                                            Slow         0.705      9.295
+
+
+Slack (MET) :             9.295ns  (requirement - actual skew)
+  Endpoint Source:        block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clkout0)
+  Endpoint Destination:   block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i)
+  Reference Source:       block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clkout0)
+  Reference Destination:  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            10.000ns
+  Endpoint Relative Delay:    5.088ns
+  Reference Relative Delay:   3.967ns
+  Relative CRPR:              0.416ns
+  Actual Bus Skew:            0.705ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkout0 rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.475     1.475 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.356     2.831    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.088     2.919 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.370     4.289    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.127     4.416 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.943     5.359    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.633     1.726 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.808     3.534    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.630 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.786     5.417    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     5.505 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.837     7.342    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     7.438 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                         net (fo=393, routed)         1.850     9.288    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X109Y84        FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X109Y84        FDRE (Prop_fdre_C_Q)         0.456     9.744 r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.606    10.350    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X109Y85        FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pll_i rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.405     1.405 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.280     2.685    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.083     2.768 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.289     4.057    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.081     4.138 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.904     5.042    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.425     1.617 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.723     3.340    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.431 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.727     5.158    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X109Y85        FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.199     5.357    
+    SLICE_X109Y85        FDRE (Setup_fdre_C_D)       -0.095     5.262    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                          10.350    
+                         clock arrival                          5.262    
+  -------------------------------------------------------------------
+                         relative delay                         5.088    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkout0 rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.405     1.405 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.280     2.685    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.083     2.768 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.289     4.057    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.081     4.138 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.904     5.042    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.425     1.617 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.723     3.340    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.431 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.668     5.099    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     5.182 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.755     6.937    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     7.028 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                         net (fo=393, routed)         1.721     8.749    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X108Y82        FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X108Y82        FDRE (Prop_fdre_C_Q)         0.418     9.167 r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.250     9.417    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X110Y82        FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pll_i rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.475     1.475 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.356     2.831    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.088     2.919 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.370     4.289    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.127     4.416 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.943     5.359    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.633     1.726 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.808     3.534    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.630 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.850     5.481    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X110Y82        FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism             -0.199     5.281    
+    SLICE_X110Y82        FDRE (Hold_fdre_C_D)         0.169     5.450    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           9.417    
+                         clock arrival                          5.450    
+  -------------------------------------------------------------------
+                         relative delay                         3.967    
+
+
+
+Id: 2
+set_bus_skew -from [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]}]] -to [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]] 10.000
+Requirement: 10.000ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_pll_i             clkout0               block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                            block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                                                                                                            Slow         0.763      9.237
+
+
+Slack (MET) :             9.237ns  (requirement - actual skew)
+  Endpoint Source:        block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i)
+  Endpoint Destination:   block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clkout0)
+  Reference Source:       block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i)
+  Reference Destination:  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clkout0)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            10.000ns
+  Endpoint Relative Delay:   -2.329ns
+  Reference Relative Delay:  -3.533ns
+  Relative CRPR:              0.441ns
+  Actual Bus Skew:            0.763ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pll_i rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.475     1.475 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.356     2.831    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.088     2.919 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.370     4.289    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.127     4.416 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.943     5.359    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.633     1.726 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.808     3.534    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.630 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.854     5.485    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X109Y85        FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X109Y85        FDRE (Prop_fdre_C_Q)         0.419     5.904 r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.499     6.402    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X108Y85        FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clkout0 rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.405     1.405 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.280     2.685    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.083     2.768 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.289     4.057    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.081     4.138 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.904     5.042    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.425     1.617 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.723     3.340    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.431 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.668     5.099    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     5.182 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.755     6.937    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     7.028 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                         net (fo=393, routed)         1.724     8.752    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X108Y85        FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.199     8.952    
+    SLICE_X108Y85        FDRE (Setup_fdre_C_D)       -0.220     8.732    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           6.402    
+                         clock arrival                          8.732    
+  -------------------------------------------------------------------
+                         relative delay                        -2.329    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pll_i rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.405     1.405 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.280     2.685    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.083     2.768 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.289     4.057    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.081     4.138 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.904     5.042    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.425     1.617 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.723     3.340    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.431 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.727     5.158    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X109Y85        FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X109Y85        FDRE (Prop_fdre_C_Q)         0.367     5.525 r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.277     5.802    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X108Y84        FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clkout0 rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.475     1.475 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.356     2.831    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.088     2.919 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.370     4.289    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.127     4.416 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.943     5.359    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.633     1.726 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.808     3.534    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.630 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.786     5.417    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     5.505 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.837     7.342    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     7.438 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                         net (fo=393, routed)         1.850     9.288    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X108Y84        FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism             -0.199     9.089    
+    SLICE_X108Y84        FDRE (Hold_fdre_C_D)         0.246     9.335    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_4/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           5.802    
+                         clock arrival                          9.335    
+  -------------------------------------------------------------------
+                         relative delay                        -3.533    
+
+
+
+Id: 3
+set_bus_skew -from [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]}]] -to [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]] 10.000
+Requirement: 10.000ns
+Endpoints: 12
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_pll_i             clkout0               block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
+                                                                            block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+                                                                                                            Slow         0.869      9.131
+
+
+Slack (MET) :             9.131ns  (requirement - actual skew)
+  Endpoint Source:        block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i)
+  Endpoint Destination:   block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clkout0)
+  Reference Source:       block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i)
+  Reference Destination:  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clkout0)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            10.000ns
+  Endpoint Relative Delay:   -2.213ns
+  Reference Relative Delay:  -3.484ns
+  Relative CRPR:              0.402ns
+  Actual Bus Skew:            0.869ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pll_i rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.475     1.475 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.356     2.831    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.088     2.919 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.370     4.289    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.127     4.416 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.943     5.359    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.633     1.726 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.808     3.534    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.630 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.834     5.465    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X70Y95         FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X70Y95         FDRE (Prop_fdre_C_Q)         0.478     5.943 r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.508     6.450    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X69Y94         FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clkout0 rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.405     1.405 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.280     2.685    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.083     2.768 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.289     4.057    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.081     4.138 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.904     5.042    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.425     1.617 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.723     3.340    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.431 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.668     5.099    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     5.182 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.755     6.937    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     7.028 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                         net (fo=393, routed)         1.706     8.734    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X69Y94         FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.199     8.934    
+    SLICE_X69Y94         FDRE (Setup_fdre_C_D)       -0.270     8.664    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           6.450    
+                         clock arrival                          8.664    
+  -------------------------------------------------------------------
+                         relative delay                        -2.213    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pll_i rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.405     1.405 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.280     2.685    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.083     2.768 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.289     4.057    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.081     4.138 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.904     5.042    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.425     1.617 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.723     3.340    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.431 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.709     5.140    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X67Y95         FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X67Y95         FDRE (Prop_fdre_C_Q)         0.367     5.507 r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.253     5.760    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X67Y94         FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clkout0 rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.475     1.475 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.356     2.831    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.088     2.919 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.370     4.289    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.127     4.416 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.943     5.359    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.633     1.726 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.808     3.534    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.630 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.786     5.417    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     5.505 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.837     7.342    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     7.438 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                         net (fo=393, routed)         1.835     9.273    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X67Y94         FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism             -0.199     9.074    
+    SLICE_X67Y94         FDRE (Hold_fdre_C_D)         0.170     9.244    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           5.760    
+                         clock arrival                          9.244    
+  -------------------------------------------------------------------
+                         relative delay                        -3.484    
+
+
+
+Id: 4
+set_bus_skew -from [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]}]] -to [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]] 10.000
+Requirement: 10.000ns
+Endpoints: 12
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clkout0               clk_pll_i             block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
+                                                                            block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
+                                                                                                            Slow         1.057      8.943
+
+
+Slack (MET) :             8.943ns  (requirement - actual skew)
+  Endpoint Source:        block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clkout0)
+  Endpoint Destination:   block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i)
+  Reference Source:       block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clkout0)
+  Reference Destination:  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            10.000ns
+  Endpoint Relative Delay:    5.353ns
+  Reference Relative Delay:   3.910ns
+  Relative CRPR:              0.386ns
+  Actual Bus Skew:            1.057ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkout0 rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.475     1.475 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.356     2.831    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.088     2.919 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.370     4.289    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.127     4.416 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.943     5.359    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.633     1.726 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.808     3.534    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.630 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.786     5.417    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     5.505 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.837     7.342    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     7.438 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                         net (fo=393, routed)         1.838     9.276    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X62Y95         FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X62Y95         FDRE (Prop_fdre_C_Q)         0.478     9.754 r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.722    10.477    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X60Y96         FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pll_i rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.405     1.405 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.280     2.685    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.083     2.768 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.289     4.057    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.081     4.138 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.904     5.042    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.425     1.617 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.723     3.340    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.431 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.717     5.148    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X60Y96         FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.199     5.347    
+    SLICE_X60Y96         FDRE (Setup_fdre_C_D)       -0.224     5.123    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                          10.477    
+                         clock arrival                          5.123    
+  -------------------------------------------------------------------
+                         relative delay                         5.353    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkout0 rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.405     1.405 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.280     2.685    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.083     2.768 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.289     4.057    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.081     4.138 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.904     5.042    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.425     1.617 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.723     3.340    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.431 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.668     5.099    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     5.182 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.755     6.937    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     7.028 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                         net (fo=393, routed)         1.709     8.737    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X65Y93         FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y93         FDRE (Prop_fdre_C_Q)         0.367     9.104 r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.245     9.349    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X65Y92         FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pll_i rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.475     1.475 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.356     2.831    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.088     2.919 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.370     4.289    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.127     4.416 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.943     5.359    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.633     1.726 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.808     3.534    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.630 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.838     5.469    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X65Y92         FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism             -0.199     5.269    
+    SLICE_X65Y92         FDRE (Hold_fdre_C_D)         0.170     5.439    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32__xdcDup__1/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           9.349    
+                         clock arrival                          5.439    
+  -------------------------------------------------------------------
+                         relative delay                         3.910    
+
+
+
+Id: 5
+set_bus_skew -from [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[9]}]] -to [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]] 10.000
+Requirement: 10.000ns
+Endpoints: 12
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clkout0               clk_pll_i             block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                            block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][10]/D
+                                                                                                            Slow         0.989      9.011
+
+
+Slack (MET) :             9.011ns  (requirement - actual skew)
+  Endpoint Source:        block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clkout0)
+  Endpoint Destination:   block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i)
+  Reference Source:       block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clkout0)
+  Reference Destination:  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            10.000ns
+  Endpoint Relative Delay:    5.257ns
+  Reference Relative Delay:   3.867ns
+  Relative CRPR:              0.401ns
+  Actual Bus Skew:            0.989ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkout0 rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.475     1.475 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.356     2.831    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.088     2.919 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.370     4.289    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.127     4.416 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.943     5.359    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.633     1.726 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.808     3.534    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.630 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.786     5.417    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     5.505 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.837     7.342    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     7.438 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                         net (fo=393, routed)         1.844     9.282    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X101Y88        FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X101Y88        FDRE (Prop_fdre_C_Q)         0.419     9.701 r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.696    10.397    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X104Y88        FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pll_i rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.405     1.405 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.280     2.685    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.083     2.768 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.289     4.057    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.081     4.138 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.904     5.042    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.425     1.617 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.723     3.340    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.431 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.728     5.159    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X104Y88        FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.199     5.358    
+    SLICE_X104Y88        FDRE (Setup_fdre_C_D)       -0.218     5.140    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                          10.397    
+                         clock arrival                          5.140    
+  -------------------------------------------------------------------
+                         relative delay                         5.257    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkout0 rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.405     1.405 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.280     2.685    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.083     2.768 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.289     4.057    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.081     4.138 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.904     5.042    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.425     1.617 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.723     3.340    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.431 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.668     5.099    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     5.182 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.755     6.937    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     7.028 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                         net (fo=393, routed)         1.717     8.745    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X101Y90        FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X101Y90        FDRE (Prop_fdre_C_Q)         0.367     9.112 r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.266     9.378    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X102Y90        FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_pll_i rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.475     1.475 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.356     2.831    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.088     2.919 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.370     4.289    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.127     4.416 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.943     5.359    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.633     1.726 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.808     3.534    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.630 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.850     5.481    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X102Y90        FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism             -0.199     5.281    
+    SLICE_X102Y90        FDRE (Hold_fdre_C_D)         0.230     5.511    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           9.378    
+                         clock arrival                          5.511    
+  -------------------------------------------------------------------
+                         relative delay                         3.867    
+
+
+
+Id: 6
+set_bus_skew -from [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[10]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[11]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[4]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[5]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[6]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[7]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[8]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[9]}]] -to [get_cells [list {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][10]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][11]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][8]} \
+          {block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][9]}]] 10.000
+Requirement: 10.000ns
+Endpoints: 12
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_pll_i             clkout0               block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][7]/D
+                                                                            block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][11]/D
+                                                                                                            Slow         1.039      8.961
+
+
+Slack (MET) :             8.961ns  (requirement - actual skew)
+  Endpoint Source:        block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i)
+  Endpoint Destination:   block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clkout0)
+  Reference Source:       block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_pll_i)
+  Reference Destination:  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clkout0)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            10.000ns
+  Endpoint Relative Delay:   -2.110ns
+  Reference Relative Delay:  -3.535ns
+  Relative CRPR:              0.386ns
+  Actual Bus Skew:            1.039ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pll_i rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.475     1.475 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.356     2.831    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.088     2.919 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.370     4.289    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.127     4.416 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.943     5.359    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.633     1.726 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.808     3.534    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.630 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.851     5.482    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X102Y91        FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X102Y91        FDRE (Prop_fdre_C_Q)         0.478     5.960 r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.652     6.611    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X94Y91         FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clkout0 rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.405     1.405 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.280     2.685    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.083     2.768 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.289     4.057    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.081     4.138 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.904     5.042    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.425     1.617 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.723     3.340    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.431 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.668     5.099    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.083     5.182 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.755     6.937    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091     7.028 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                         net (fo=393, routed)         1.711     8.739    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X94Y91         FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.199     8.939    
+    SLICE_X94Y91         FDRE (Setup_fdre_C_D)       -0.217     8.722    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           6.611    
+                         clock arrival                          8.722    
+  -------------------------------------------------------------------
+                         relative delay                        -2.110    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_pll_i rise edge)
+                                                      0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.405     1.405 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.280     2.685    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.083     2.768 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.289     4.057    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.081     4.138 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.904     5.042    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.425     1.617 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.723     3.340    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.431 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.713     5.144    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X95Y90         FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X95Y90         FDRE (Prop_fdre_C_Q)         0.367     5.511 r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.266     5.777    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X96Y90         FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clkout0 rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk_i (IN)
+                         net (fo=0)                   0.000     0.000    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/sys_clk_i
+    R4                   IBUF (Prop_ibuf_I_O)         1.475     1.475 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk/O
+                         net (fo=1, routed)           1.356     2.831    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/mmcm_clk
+    PLLE2_ADV_X1Y3       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT3)
+                                                      0.088     2.919 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3
+                         net (fo=1, routed)           1.370     4.289    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out
+    BUFHCE_X1Y36         BUFH (Prop_bufh_I_O)         0.127     4.416 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufh_pll_clk3/O
+                         net (fo=1, routed)           0.943     5.359    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3
+    MMCME2_ADV_X1Y3      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -3.633     1.726 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/gen_ui_extra_clocks.mmcm_i/CLKFBOUT
+                         net (fo=1, routed)           1.808     3.534    block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.630 r  block_design_i/mig_7series_0/u_block_design_mig_7series_0_0_mig/u_ddr3_infrastructure/u_bufg_clkdiv0/O
+                         net (fo=33461, routed)       1.786     5.417    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/CLK_100MHZ_I
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                      0.088     5.505 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.837     7.342    block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     7.438 r  block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Dcm/clkout1_buf/O
+                         net (fo=393, routed)         1.843     9.281    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X96Y90         FDRE                                         r  block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism             -0.199     9.082    
+    SLICE_X96Y90         FDRE (Hold_fdre_C_D)         0.230     9.312    block_design_wrapper/block_design/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0/block_design_d_axi_i2s_audio_0_0_d_axi_i2s_audio_v2_0_AXI_L/block_design_d_axi_i2s_audio_0_0_i2s_rx_tx/block_design_d_axi_i2s_audio_0_0_fifo_32/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           5.777    
+                         clock arrival                          9.312    
+  -------------------------------------------------------------------
+                         relative delay                        -3.535    
+
+
+
