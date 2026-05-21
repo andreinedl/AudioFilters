@@ -106,7 +106,8 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param general.usePosixSpawnForFork 1
   set_param chipscope.maxJobs 3
-  set_param runs.launchOptions { -jobs 6  }
+  set_param bd.open.in_stealth_mode 2
+  set_param runs.launchOptions { -jobs 12  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a200tsbg484-1
   set_property board_part digilentinc.com:nexys_video:part0:1.2 [current_project]
@@ -197,6 +198,10 @@ set rc [catch {
   create_msg_db place_design.pb
 OPTRACE "read constraints: place_design" START { }
 OPTRACE "read constraints: place_design" END { }
+OPTRACE "read incremental checkpoint" START { }
+  read_checkpoint -auto_incremental  -incremental D:/Vivado/AudioFilters/AudioFilters.srcs/utils_1/imports/impl_1/block_design_wrapper_routed.dcp
+  catch { report_incremental_reuse -file block_design_wrapper_incremental_reuse_pre_placed.rpt }
+OPTRACE "read incremental checkpoint" END { }
   if { [llength [get_debug_cores -quiet] ] > 0 }  { 
 OPTRACE "implement_debug_core" START { }
     implement_debug_core 

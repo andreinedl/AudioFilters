@@ -2,11 +2,11 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
--- Date        : Sat May  2 00:29:33 2026
+-- Date        : Sat May 16 22:40:34 2026
 -- Host        : SPACESHIP running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top block_design_rst_clk_wiz_1_100M_0 -prefix
---               block_design_rst_clk_wiz_1_100M_0_ block_design_rst_clk_wiz_1_100M_0_sim_netlist.vhdl
--- Design      : block_design_rst_clk_wiz_1_100M_0
+--               block_design_rst_clk_wiz_1_100M_0_ block_design_proc_sys_reset_0_0_sim_netlist.vhdl
+-- Design      : block_design_proc_sys_reset_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7a200tsbg484-1
@@ -354,8 +354,8 @@ entity block_design_rst_clk_wiz_1_100M_0_lpf is
     lpf_int : out STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC;
     dcm_locked : in STD_LOGIC;
-    mb_debug_sys_rst : in STD_LOGIC;
     ext_reset_in : in STD_LOGIC;
+    mb_debug_sys_rst : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
 end block_design_rst_clk_wiz_1_100M_0_lpf;
@@ -378,26 +378,26 @@ architecture STRUCTURE of block_design_rst_clk_wiz_1_100M_0_lpf is
   signal p_2_in3_in : STD_LOGIC;
   signal p_3_in1_in : STD_LOGIC;
   attribute DEST_SYNC_FF : integer;
-  attribute DEST_SYNC_FF of \ACTIVE_LOW_AUX.ACT_LO_AUX\ : label is 4;
+  attribute DEST_SYNC_FF of \ACTIVE_HIGH_EXT.ACT_HI_EXT\ : label is 4;
   attribute INIT_SYNC_FF : integer;
-  attribute INIT_SYNC_FF of \ACTIVE_LOW_AUX.ACT_LO_AUX\ : label is 0;
+  attribute INIT_SYNC_FF of \ACTIVE_HIGH_EXT.ACT_HI_EXT\ : label is 0;
   attribute SIM_ASSERT_CHK : integer;
-  attribute SIM_ASSERT_CHK of \ACTIVE_LOW_AUX.ACT_LO_AUX\ : label is 0;
+  attribute SIM_ASSERT_CHK of \ACTIVE_HIGH_EXT.ACT_HI_EXT\ : label is 0;
   attribute SRC_INPUT_REG : integer;
-  attribute SRC_INPUT_REG of \ACTIVE_LOW_AUX.ACT_LO_AUX\ : label is 0;
+  attribute SRC_INPUT_REG of \ACTIVE_HIGH_EXT.ACT_HI_EXT\ : label is 0;
   attribute VERSION : integer;
-  attribute VERSION of \ACTIVE_LOW_AUX.ACT_LO_AUX\ : label is 0;
+  attribute VERSION of \ACTIVE_HIGH_EXT.ACT_HI_EXT\ : label is 0;
   attribute XPM_CDC : string;
-  attribute XPM_CDC of \ACTIVE_LOW_AUX.ACT_LO_AUX\ : label is "SINGLE";
+  attribute XPM_CDC of \ACTIVE_HIGH_EXT.ACT_HI_EXT\ : label is "SINGLE";
   attribute XPM_MODULE : string;
+  attribute XPM_MODULE of \ACTIVE_HIGH_EXT.ACT_HI_EXT\ : label is "TRUE";
+  attribute DEST_SYNC_FF of \ACTIVE_LOW_AUX.ACT_LO_AUX\ : label is 4;
+  attribute INIT_SYNC_FF of \ACTIVE_LOW_AUX.ACT_LO_AUX\ : label is 0;
+  attribute SIM_ASSERT_CHK of \ACTIVE_LOW_AUX.ACT_LO_AUX\ : label is 0;
+  attribute SRC_INPUT_REG of \ACTIVE_LOW_AUX.ACT_LO_AUX\ : label is 0;
+  attribute VERSION of \ACTIVE_LOW_AUX.ACT_LO_AUX\ : label is 0;
+  attribute XPM_CDC of \ACTIVE_LOW_AUX.ACT_LO_AUX\ : label is "SINGLE";
   attribute XPM_MODULE of \ACTIVE_LOW_AUX.ACT_LO_AUX\ : label is "TRUE";
-  attribute DEST_SYNC_FF of \ACTIVE_LOW_EXT.ACT_LO_EXT\ : label is 4;
-  attribute INIT_SYNC_FF of \ACTIVE_LOW_EXT.ACT_LO_EXT\ : label is 0;
-  attribute SIM_ASSERT_CHK of \ACTIVE_LOW_EXT.ACT_LO_EXT\ : label is 0;
-  attribute SRC_INPUT_REG of \ACTIVE_LOW_EXT.ACT_LO_EXT\ : label is 0;
-  attribute VERSION of \ACTIVE_LOW_EXT.ACT_LO_EXT\ : label is 0;
-  attribute XPM_CDC of \ACTIVE_LOW_EXT.ACT_LO_EXT\ : label is "SINGLE";
-  attribute XPM_MODULE of \ACTIVE_LOW_EXT.ACT_LO_EXT\ : label is "TRUE";
   attribute BOX_TYPE : string;
   attribute BOX_TYPE of POR_SRL_I : label is "PRIMITIVE";
   attribute XILINX_LEGACY_PRIM : string;
@@ -407,6 +407,22 @@ architecture STRUCTURE of block_design_rst_clk_wiz_1_100M_0_lpf is
   attribute srl_name : string;
   attribute srl_name of POR_SRL_I : label is "U0/\EXT_LPF/POR_SRL_I ";
 begin
+\ACTIVE_HIGH_EXT.ACT_HI_EXT\: entity work.\block_design_rst_clk_wiz_1_100M_0_xpm_cdc_single__1\
+     port map (
+      dest_clk => slowest_sync_clk,
+      dest_out => dest_out,
+      src_clk => '1',
+      src_in => exr_d1
+    );
+\ACTIVE_HIGH_EXT.ACT_HI_EXT_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => ext_reset_in,
+      I1 => mb_debug_sys_rst,
+      O => exr_d1
+    );
 \ACTIVE_LOW_AUX.ACT_LO_AUX\: entity work.block_design_rst_clk_wiz_1_100M_0_xpm_cdc_single
      port map (
       dest_clk => slowest_sync_clk,
@@ -421,22 +437,6 @@ begin
         port map (
       I0 => aux_reset_in,
       O => asr_d1
-    );
-\ACTIVE_LOW_EXT.ACT_LO_EXT\: entity work.\block_design_rst_clk_wiz_1_100M_0_xpm_cdc_single__1\
-     port map (
-      dest_clk => slowest_sync_clk,
-      dest_out => dest_out,
-      src_clk => '1',
-      src_in => exr_d1
-    );
-\ACTIVE_LOW_EXT.ACT_LO_EXT_i_1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"B"
-    )
-        port map (
-      I0 => mb_debug_sys_rst,
-      I1 => ext_reset_in,
-      O => exr_d1
     );
 \AUX_LPF[1].asr_lpf_reg[1]\: unisim.vcomponents.FDRE
     generic map(
@@ -926,7 +926,7 @@ entity block_design_rst_clk_wiz_1_100M_0_proc_sys_reset is
   attribute C_AUX_RST_WIDTH : integer;
   attribute C_AUX_RST_WIDTH of block_design_rst_clk_wiz_1_100M_0_proc_sys_reset : entity is 4;
   attribute C_EXT_RESET_HIGH : string;
-  attribute C_EXT_RESET_HIGH of block_design_rst_clk_wiz_1_100M_0_proc_sys_reset : entity is "1'b0";
+  attribute C_EXT_RESET_HIGH of block_design_rst_clk_wiz_1_100M_0_proc_sys_reset : entity is "1'b1";
   attribute C_EXT_RST_WIDTH : integer;
   attribute C_EXT_RST_WIDTH of block_design_rst_clk_wiz_1_100M_0_proc_sys_reset : entity is 4;
   attribute C_FAMILY : string;
@@ -1065,7 +1065,7 @@ entity block_design_rst_clk_wiz_1_100M_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of block_design_rst_clk_wiz_1_100M_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of block_design_rst_clk_wiz_1_100M_0 : entity is "block_design_rst_clk_wiz_1_100M_0,proc_sys_reset,{}";
+  attribute CHECK_LICENSE_TYPE of block_design_rst_clk_wiz_1_100M_0 : entity is "block_design_proc_sys_reset_0_0,proc_sys_reset,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of block_design_rst_clk_wiz_1_100M_0 : entity is "yes";
   attribute x_core_info : string;
@@ -1078,7 +1078,7 @@ architecture STRUCTURE of block_design_rst_clk_wiz_1_100M_0 is
   attribute C_AUX_RST_WIDTH : integer;
   attribute C_AUX_RST_WIDTH of U0 : label is 4;
   attribute C_EXT_RESET_HIGH : string;
-  attribute C_EXT_RESET_HIGH of U0 : label is "1'b0";
+  attribute C_EXT_RESET_HIGH of U0 : label is "1'b1";
   attribute C_EXT_RST_WIDTH : integer;
   attribute C_EXT_RST_WIDTH of U0 : label is 4;
   attribute C_FAMILY : string;
@@ -1099,7 +1099,7 @@ architecture STRUCTURE of block_design_rst_clk_wiz_1_100M_0 is
   attribute x_interface_parameter of aux_reset_in : signal is "XIL_INTERFACENAME aux_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute x_interface_info of ext_reset_in : signal is "xilinx.com:signal:reset:1.0 ext_reset RST";
   attribute x_interface_mode of ext_reset_in : signal is "slave ext_reset";
-  attribute x_interface_parameter of ext_reset_in : signal is "XIL_INTERFACENAME ext_reset, BOARD.ASSOCIATED_PARAM RESET_BOARD_INTERFACE, POLARITY ACTIVE_LOW, INSERT_VIP 0";
+  attribute x_interface_parameter of ext_reset_in : signal is "XIL_INTERFACENAME ext_reset, BOARD.ASSOCIATED_PARAM RESET_BOARD_INTERFACE, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
   attribute x_interface_info of mb_debug_sys_rst : signal is "xilinx.com:signal:reset:1.0 dbg_reset RST";
   attribute x_interface_mode of mb_debug_sys_rst : signal is "slave dbg_reset";
   attribute x_interface_parameter of mb_debug_sys_rst : signal is "XIL_INTERFACENAME dbg_reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0";

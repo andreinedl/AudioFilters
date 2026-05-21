@@ -48,14 +48,5 @@
 ## INFO: Level CDC Crossing in AXI DMA
 
 
-create_waiver -internal -scope -type CDC -id {CDC-1} -user "axi_dma" -tags "9601"\
--desc "The CDC-1 warning is waived as it is safe in the context of AXI DMA. The Address and Data value does not change until AXI transaction is complete." \
--to [get_pins -hier -quiet -filter {NAME =~*I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK/syncstages_ff_reg*/D}]
-
-create_waiver -internal -scope -type CDC -id {CDC-1} -user "axi_dma" -tags "9601"\
--desc "The CDC-1 warning is waived as it is safe in the context of AXI DMA. The Address and Data value does not change until AXI transaction is complete." \
--to [get_pins -hier -quiet -filter {NAME =~*I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/syncstages_ff_reg*/D}]
-
-
 
 

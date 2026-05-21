@@ -130,13 +130,11 @@ module block_design_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire iic_rtl_sda_t,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire [7:0] led_8bits_tri_o,
+  input wire usb_uart_rxd,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire [7:0] dip_switches_8bits_tri_i,
+  output wire usb_uart_txd,
   (* X_INTERFACE_IGNORE = "true" *)
   input wire sys_clk_i,
-  (* X_INTERFACE_IGNORE = "true" *)
-  input wire reset,
   (* X_INTERFACE_IGNORE = "true" *)
   input wire [0:0] SDATA_I,
   (* X_INTERFACE_IGNORE = "true" *)
@@ -148,9 +146,13 @@ module block_design_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire MCLK_O,
   (* X_INTERFACE_IGNORE = "true" *)
-  input wire usb_uart_rxd,
+  output wire init_calib_complete_0,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire usb_uart_txd
+  input wire cpu_resetn,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire [7:0] sw,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire [1:0] btn
 );
 
   block_design inst (
@@ -192,17 +194,18 @@ module block_design_sv (
     .iic_rtl_sda_i(iic_rtl_sda_i),
     .iic_rtl_sda_o(iic_rtl_sda_o),
     .iic_rtl_sda_t(iic_rtl_sda_t),
-    .led_8bits_tri_o(led_8bits_tri_o),
-    .dip_switches_8bits_tri_i(dip_switches_8bits_tri_i),
+    .usb_uart_rxd(usb_uart_rxd),
+    .usb_uart_txd(usb_uart_txd),
     .sys_clk_i(sys_clk_i),
-    .reset(reset),
     .SDATA_I(SDATA_I),
     .BCLK_O(BCLK_O),
     .LRCLK_O(LRCLK_O),
     .SDATA_O(SDATA_O),
     .MCLK_O(MCLK_O),
-    .usb_uart_rxd(usb_uart_rxd),
-    .usb_uart_txd(usb_uart_txd)
+    .init_calib_complete_0(init_calib_complete_0),
+    .cpu_resetn(cpu_resetn),
+    .sw(sw),
+    .btn(btn)
   );
 
 endmodule

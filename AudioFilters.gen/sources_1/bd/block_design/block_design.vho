@@ -91,17 +91,18 @@ COMPONENT block_design
     iic_rtl_sda_i : IN STD_LOGIC;
     iic_rtl_sda_o : OUT STD_LOGIC;
     iic_rtl_sda_t : OUT STD_LOGIC;
-    led_8bits_tri_o : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    dip_switches_8bits_tri_i : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    usb_uart_rxd : IN STD_LOGIC;
+    usb_uart_txd : OUT STD_LOGIC;
     sys_clk_i : IN STD_LOGIC;
-    reset : IN STD_LOGIC;
     SDATA_I : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     BCLK_O : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     LRCLK_O : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     SDATA_O : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     MCLK_O : OUT STD_LOGIC;
-    usb_uart_rxd : IN STD_LOGIC;
-    usb_uart_txd : OUT STD_LOGIC
+    init_calib_complete_0 : OUT STD_LOGIC;
+    cpu_resetn : IN STD_LOGIC;
+    sw : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    btn : IN STD_LOGIC_VECTOR(1 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------  End cut for COMPONENT Declaration  ------
@@ -150,17 +151,18 @@ your_instance_name : block_design
     iic_rtl_sda_i => iic_rtl_sda_i,
     iic_rtl_sda_o => iic_rtl_sda_o,
     iic_rtl_sda_t => iic_rtl_sda_t,
-    led_8bits_tri_o => led_8bits_tri_o,
-    dip_switches_8bits_tri_i => dip_switches_8bits_tri_i,
+    usb_uart_rxd => usb_uart_rxd,
+    usb_uart_txd => usb_uart_txd,
     sys_clk_i => sys_clk_i,
-    reset => reset,
     SDATA_I => SDATA_I,
     BCLK_O => BCLK_O,
     LRCLK_O => LRCLK_O,
     SDATA_O => SDATA_O,
     MCLK_O => MCLK_O,
-    usb_uart_rxd => usb_uart_rxd,
-    usb_uart_txd => usb_uart_txd
+    init_calib_complete_0 => init_calib_complete_0,
+    cpu_resetn => cpu_resetn,
+    sw => sw,
+    btn => btn
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

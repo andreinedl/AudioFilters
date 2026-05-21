@@ -1,4 +1,0 @@
-domain_path: D:\Vivado\AudioFilters\vitis_workspace\audio_filters_platform\export\audio_filters_platform\sw\standalone_microblaze_riscv_0
-app_src_dir: C:\AMDDesignTools\2025.2\Vitis\data\embeddedsw\lib\sw_apps\empty_application
-template: empty_application
-lang: c

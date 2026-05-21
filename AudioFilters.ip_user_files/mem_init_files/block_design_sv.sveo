@@ -104,15 +104,18 @@ block_design_sv your_instance_name (
   .iic_rtl_sda_i(iic_rtl_sda_i), // input wire iic_rtl_sda_i
   .iic_rtl_sda_o(iic_rtl_sda_o), // output wire iic_rtl_sda_o
   .iic_rtl_sda_t(iic_rtl_sda_t), // output wire iic_rtl_sda_t
-  .led_8bits_tri_o(led_8bits_tri_o), // output wire [7:0] led_8bits_tri_o
-  .dip_switches_8bits_tri_i(dip_switches_8bits_tri_i), // input wire [7:0] dip_switches_8bits_tri_i
+  .usb_uart_rxd(usb_uart_rxd), // input wire usb_uart_rxd
+  .usb_uart_txd(usb_uart_txd), // output wire usb_uart_txd
   .sys_clk_i(sys_clk_i), // input wire sys_clk_i
-  .reset(reset), // input wire reset
   .SDATA_I(SDATA_I), // input wire [0:0] SDATA_I
   .BCLK_O(BCLK_O), // output wire [0:0] BCLK_O
   .LRCLK_O(LRCLK_O), // output wire [0:0] LRCLK_O
   .SDATA_O(SDATA_O), // output wire [0:0] SDATA_O
-  .MCLK_O(MCLK_O) // output wire MCLK_O
+  .MCLK_O(MCLK_O), // output wire MCLK_O
+  .init_calib_complete_0(init_calib_complete_0), // output wire init_calib_complete_0
+  .cpu_resetn(cpu_resetn), // input wire cpu_resetn
+  .sw(sw), // input wire [7:0] sw
+  .btn(btn) // input wire [1:0] btn
 );
 // INST_TAG_END ------  End cut for WRAPPER INSTANTIATION Template  ------
 

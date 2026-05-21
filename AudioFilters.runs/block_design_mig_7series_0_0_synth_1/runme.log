@@ -8,12 +8,12 @@
   **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Sat May  2 12:57:45 2026
+  **** Start of session at: Mon May 18 08:59:03 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source block_design_mig_7series_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:16 . Memory (MB): peak = 589.211 ; gain = 256.785
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 588.723 ; gain = 257.992
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/AudioFilters/vivado-library'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/AudioFilters/AudioFilters.ipdefs/repo/local/ip/d_axi_i2s_audio_v2_0'.
@@ -25,9 +25,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200
 INFO: [Device 21-403] Loading part xc7a200tsbg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 47880
+INFO: [Synth 8-7075] Helper process launched with PID 3720
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1407.922 ; gain = 541.434
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1408.602 ; gain = 540.586
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-10515] begin/end is required for generate-for in this mode of Verilog [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mig_7series_0_0/block_design_mig_7series_0_0/user_design/rtl/controller/mig_7series_v4_2_arb_row_col.v:253]
 INFO: [Synth 8-11241] undeclared symbol 'dbg_sel_po_incdec', assumed default net type 'wire' [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mig_7series_0_0/block_design_mig_7series_0_0/user_design/rtl/block_design_mig_7series_0_0_mig.v:1260]
@@ -833,18 +833,18 @@ WARNING: [Synth 8-7129] Port accept in module mig_7series_v4_2_ui_top is either 
 WARNING: [Synth 8-7129] Port calib_device_temp[11] in module mig_7series_v4_2_ddr_phy_tempmon is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 1796.301 ; gain = 929.812
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1798.535 ; gain = 930.520
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1796.301 ; gain = 929.812
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1798.535 ; gain = 930.520
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1796.301 ; gain = 929.812
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1798.535 ; gain = 930.520
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1796.301 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.432 . Memory (MB): peak = 1798.535 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 348 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -858,12 +858,10 @@ Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_des
 Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mig_7series_0_0/block_design_mig_7series_0_0/user_design/constraints/block_design_mig_7series_0_0.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mig_7series_0_0/block_design_mig_7series_0_0/user_design/constraints/block_design_mig_7series_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/block_design_mig_7series_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/block_design_mig_7series_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mig_7series_0_0/block_design_mig_7series_0_0_board.xdc]
-Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mig_7series_0_0/block_design_mig_7series_0_0_board.xdc]
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1890.973 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1895.590 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 95 instances were transformed.
   IBUFG => IBUF: 1 instance 
@@ -873,23 +871,23 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 51 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.611 . Memory (MB): peak = 1890.973 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.276 . Memory (MB): peak = 1895.590 ; gain = 0.000
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:05 ; elapsed = 00:01:14 . Memory (MB): peak = 1890.973 ; gain = 1024.484
+Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1895.590 ; gain = 1027.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tsbg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:05 ; elapsed = 00:01:14 . Memory (MB): peak = 1890.973 ; gain = 1024.484
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1895.590 ; gain = 1027.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:06 ; elapsed = 00:01:14 . Memory (MB): peak = 1890.973 ; gain = 1024.484
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 1895.590 ; gain = 1027.574
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'xadc_supplied_temperature.tempmon_state_reg' in module 'mig_7series_v4_2_tempmon'
 INFO: [Synth 8-802] inferred FSM for state register 'wl_state_r_reg' in module 'mig_7series_v4_2_ddr_phy_wrlvl'
@@ -1113,7 +1111,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'tempmon_state_reg' using e
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'mig_7series_v4_2_axi_mc_r_channel'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:02 ; elapsed = 00:02:12 . Memory (MB): peak = 1890.973 ; gain = 1024.484
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:06 ; elapsed = 00:01:07 . Memory (MB): peak = 1895.590 ; gain = 1027.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1288,7 +1286,7 @@ WARNING: [Synth 8-3332] Sequential element (USE_UPSIZER.upsizer_d2/USE_READ.read
 WARNING: [Synth 8-3332] Sequential element (USE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.USE_FPGA_OUTPUT_PIPELINE.DATA_GEN[16].FDRE_inst) is unused and will be removed from module mig_7series_v4_2_axi_mc.
 WARNING: [Synth 8-3332] Sequential element (USE_UPSIZER.upsizer_d2/USE_READ.read_addr_inst/USE_BURSTS.cmd_queue/USE_FF_OUT.USE_FPGA_OUTPUT_PIPELINE.DATA_GEN[33].FDRE_inst) is unused and will be removed from module mig_7series_v4_2_axi_mc.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:09 ; elapsed = 00:04:24 . Memory (MB): peak = 2300.805 ; gain = 1434.316
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:36 ; elapsed = 00:02:39 . Memory (MB): peak = 2290.137 ; gain = 1422.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1324,13 +1322,13 @@ Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3321] set_false_path : Empty through list for constraint at line 374 of d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mig_7series_0_0/block_design_mig_7series_0_0/user_design/constraints/block_design_mig_7series_0_0.xdc. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mig_7series_0_0/block_design_mig_7series_0_0/user_design/constraints/block_design_mig_7series_0_0.xdc:374]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:14 ; elapsed = 00:04:29 . Memory (MB): peak = 2300.805 ; gain = 1434.316
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:41 ; elapsed = 00:02:44 . Memory (MB): peak = 2290.137 ; gain = 1422.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:04:15 ; elapsed = 00:04:30 . Memory (MB): peak = 2300.805 ; gain = 1434.316
+Finished Timing Optimization : Time (s): cpu = 00:02:42 ; elapsed = 00:02:45 . Memory (MB): peak = 2290.137 ; gain = 1422.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1355,7 +1353,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:04:20 ; elapsed = 00:04:37 . Memory (MB): peak = 2300.805 ; gain = 1434.316
+Finished Technology Mapping : Time (s): cpu = 00:02:47 ; elapsed = 00:02:50 . Memory (MB): peak = 2290.137 ; gain = 1422.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1373,37 +1371,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:04:25 ; elapsed = 00:04:41 . Memory (MB): peak = 2300.805 ; gain = 1434.316
+Finished IO Insertion : Time (s): cpu = 00:02:52 ; elapsed = 00:02:55 . Memory (MB): peak = 2290.137 ; gain = 1422.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:04:25 ; elapsed = 00:04:41 . Memory (MB): peak = 2300.805 ; gain = 1434.316
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:52 ; elapsed = 00:02:55 . Memory (MB): peak = 2290.137 ; gain = 1422.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:26 ; elapsed = 00:04:43 . Memory (MB): peak = 2300.805 ; gain = 1434.316
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:54 ; elapsed = 00:02:57 . Memory (MB): peak = 2290.137 ; gain = 1422.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:04:27 ; elapsed = 00:04:43 . Memory (MB): peak = 2300.805 ; gain = 1434.316
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:54 ; elapsed = 00:02:57 . Memory (MB): peak = 2290.137 ; gain = 1422.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:04:27 ; elapsed = 00:04:43 . Memory (MB): peak = 2300.805 ; gain = 1434.316
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:54 ; elapsed = 00:02:57 . Memory (MB): peak = 2290.137 ; gain = 1422.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:04:27 ; elapsed = 00:04:43 . Memory (MB): peak = 2300.805 ; gain = 1434.316
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:54 ; elapsed = 00:02:57 . Memory (MB): peak = 2290.137 ; gain = 1422.121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1501,19 +1499,19 @@ Report Cell Usage:
 |49    |OBUFT                          |     2|
 +------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:04:27 ; elapsed = 00:04:43 . Memory (MB): peak = 2300.805 ; gain = 1434.316
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:54 ; elapsed = 00:02:57 . Memory (MB): peak = 2290.137 ; gain = 1422.121
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:03:36 ; elapsed = 00:04:20 . Memory (MB): peak = 2300.805 ; gain = 1339.645
-Synthesis Optimization Complete : Time (s): cpu = 00:04:27 ; elapsed = 00:04:43 . Memory (MB): peak = 2300.805 ; gain = 1434.316
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:29 ; elapsed = 00:02:48 . Memory (MB): peak = 2290.137 ; gain = 1325.066
+Synthesis Optimization Complete : Time (s): cpu = 00:02:54 ; elapsed = 00:02:57 . Memory (MB): peak = 2290.137 ; gain = 1422.121
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.298 . Memory (MB): peak = 2300.805 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.281 . Memory (MB): peak = 2290.137 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 580 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'u_block_design_mig_7series_0_0_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 2 inverter(s) to 16 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2300.805 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2290.137 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 199 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 41 instances
@@ -1525,13 +1523,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 112 instances
   RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
 
-Synth Design complete | Checksum: 7b34f96e
+Synth Design complete | Checksum: 52cf98fc
 INFO: [Common 17-83] Releasing license: Synthesis
 262 Infos, 314 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:04:38 ; elapsed = 00:04:57 . Memory (MB): peak = 2300.805 ; gain = 1666.547
+synth_design: Time (s): cpu = 00:03:01 ; elapsed = 00:03:06 . Memory (MB): peak = 2290.137 ; gain = 1655.324
 INFO: [Coretcl 2-1174] Renamed 179 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2300.805 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2290.137 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/Vivado/AudioFilters/AudioFilters.runs/block_design_mig_7series_0_0_synth_1/block_design_mig_7series_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file block_design_mig_7series_0_0_utilization_synth.rpt -pb block_design_mig_7series_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat May  2 13:03:12 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon May 18 09:02:26 2026...

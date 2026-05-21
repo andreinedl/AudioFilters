@@ -57,7 +57,7 @@ if {$::dispatch::connected} {
 
 OPTRACE "block_design_mig_7series_0_0_synth_1" START { ROLLUP_AUTO }
 set_param general.usePosixSpawnForFork 1
-set_param bd.open.in_stealth_mode 1
+set_param bd.open.in_stealth_mode 2
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -85,7 +85,6 @@ OPTRACE "Adding files" START { }
 read_ip -quiet D:/Vivado/AudioFilters/AudioFilters.srcs/sources_1/bd/block_design/ip/block_design_mig_7series_0_0/block_design_mig_7series_0_0.xci
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mig_7series_0_0/block_design_mig_7series_0_0/user_design/constraints/block_design_mig_7series_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mig_7series_0_0/block_design_mig_7series_0_0/user_design/constraints/block_design_mig_7series_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mig_7series_0_0/block_design_mig_7series_0_0_board.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

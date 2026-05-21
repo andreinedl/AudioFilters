@@ -2,18 +2,18 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-// Date        : Sat May  2 00:29:33 2026
+// Date        : Sat May 16 22:40:34 2026
 // Host        : SPACESHIP running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top block_design_rst_clk_wiz_1_100M_0 -prefix
-//               block_design_rst_clk_wiz_1_100M_0_ block_design_rst_clk_wiz_1_100M_0_sim_netlist.v
-// Design      : block_design_rst_clk_wiz_1_100M_0
+//               block_design_rst_clk_wiz_1_100M_0_ block_design_proc_sys_reset_0_0_sim_netlist.v
+// Design      : block_design_proc_sys_reset_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7a200tsbg484-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "block_design_rst_clk_wiz_1_100M_0,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2025.2" *) 
+(* CHECK_LICENSE_TYPE = "block_design_proc_sys_reset_0_0,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2025.2" *) 
 (* NotValidForBitStream *)
 module block_design_rst_clk_wiz_1_100M_0
    (slowest_sync_clk,
@@ -27,7 +27,7 @@ module block_design_rst_clk_wiz_1_100M_0
     interconnect_aresetn,
     peripheral_aresetn);
   (* x_interface_info = "xilinx.com:signal:clock:1.0 clock CLK" *) (* x_interface_mode = "slave clock" *) (* x_interface_parameter = "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0, CLK_DOMAIN block_design_mig_7series_0_0_ui_clk, INSERT_VIP 0" *) input slowest_sync_clk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 ext_reset RST" *) (* x_interface_mode = "slave ext_reset" *) (* x_interface_parameter = "XIL_INTERFACENAME ext_reset, BOARD.ASSOCIATED_PARAM RESET_BOARD_INTERFACE, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input ext_reset_in;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 ext_reset RST" *) (* x_interface_mode = "slave ext_reset" *) (* x_interface_parameter = "XIL_INTERFACENAME ext_reset, BOARD.ASSOCIATED_PARAM RESET_BOARD_INTERFACE, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input ext_reset_in;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 aux_reset RST" *) (* x_interface_mode = "slave aux_reset" *) (* x_interface_parameter = "XIL_INTERFACENAME aux_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input aux_reset_in;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 dbg_reset RST" *) (* x_interface_mode = "slave dbg_reset" *) (* x_interface_parameter = "XIL_INTERFACENAME dbg_reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input mb_debug_sys_rst;
   input dcm_locked;
@@ -40,8 +40,7 @@ module block_design_rst_clk_wiz_1_100M_0
   wire aux_reset_in;
   wire [0:0]bus_struct_reset;
   wire dcm_locked;
-  (* RTL_KEEP = "yes" *) (* x_interface_info = "xilinx.com:signal:reset:1.0 ext_reset RST" *) (* x_interface_mode = "slave ext_reset" *) 
-  (* x_interface_parameter = "XIL_INTERFACENAME ext_reset, BOARD.ASSOCIATED_PARAM RESET_BOARD_INTERFACE, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) wire ext_reset_in;
+  wire ext_reset_in;
   wire [0:0]interconnect_aresetn;
   wire mb_debug_sys_rst;
   wire mb_reset;
@@ -51,7 +50,7 @@ module block_design_rst_clk_wiz_1_100M_0
 
   (* C_AUX_RESET_HIGH = "1'b0" *) 
   (* C_AUX_RST_WIDTH = "4" *) 
-  (* C_EXT_RESET_HIGH = "1'b0" *) 
+  (* C_EXT_RESET_HIGH = "1'b1" *) 
   (* C_EXT_RST_WIDTH = "4" *) 
   (* C_FAMILY = "artix7" *) 
   (* C_NUM_BUS_RST = "1" *) 
@@ -75,14 +74,14 @@ module block_design_rst_clk_wiz_1_100M_0_lpf
    (lpf_int,
     slowest_sync_clk,
     dcm_locked,
-    mb_debug_sys_rst,
     ext_reset_in,
+    mb_debug_sys_rst,
     aux_reset_in);
   output lpf_int;
   input slowest_sync_clk;
   input dcm_locked;
-  input mb_debug_sys_rst;
   input ext_reset_in;
+  input mb_debug_sys_rst;
   input aux_reset_in;
 
   wire \AUX_LPF[3].asr_lpf_reg_n_0_[3] ;
@@ -115,6 +114,24 @@ module block_design_rst_clk_wiz_1_100M_0_lpf
   (* VERSION = "0" *) 
   (* XPM_CDC = "SINGLE" *) 
   (* XPM_MODULE = "TRUE" *) 
+  block_design_rst_clk_wiz_1_100M_0_xpm_cdc_single__1 \ACTIVE_HIGH_EXT.ACT_HI_EXT 
+       (.dest_clk(slowest_sync_clk),
+        .dest_out(dest_out),
+        .src_clk(1'b1),
+        .src_in(exr_d1));
+  LUT2 #(
+    .INIT(4'hE)) 
+    \ACTIVE_HIGH_EXT.ACT_HI_EXT_i_1 
+       (.I0(ext_reset_in),
+        .I1(mb_debug_sys_rst),
+        .O(exr_d1));
+  (* DEST_SYNC_FF = "4" *) 
+  (* INIT_SYNC_FF = "0" *) 
+  (* SIM_ASSERT_CHK = "0" *) 
+  (* SRC_INPUT_REG = "0" *) 
+  (* VERSION = "0" *) 
+  (* XPM_CDC = "SINGLE" *) 
+  (* XPM_MODULE = "TRUE" *) 
   block_design_rst_clk_wiz_1_100M_0_xpm_cdc_single \ACTIVE_LOW_AUX.ACT_LO_AUX 
        (.dest_clk(slowest_sync_clk),
         .dest_out(p_3_in1_in),
@@ -125,24 +142,6 @@ module block_design_rst_clk_wiz_1_100M_0_lpf
     \ACTIVE_LOW_AUX.ACT_LO_AUX_i_1 
        (.I0(aux_reset_in),
         .O(asr_d1));
-  (* DEST_SYNC_FF = "4" *) 
-  (* INIT_SYNC_FF = "0" *) 
-  (* SIM_ASSERT_CHK = "0" *) 
-  (* SRC_INPUT_REG = "0" *) 
-  (* VERSION = "0" *) 
-  (* XPM_CDC = "SINGLE" *) 
-  (* XPM_MODULE = "TRUE" *) 
-  block_design_rst_clk_wiz_1_100M_0_xpm_cdc_single__1 \ACTIVE_LOW_EXT.ACT_LO_EXT 
-       (.dest_clk(slowest_sync_clk),
-        .dest_out(dest_out),
-        .src_clk(1'b1),
-        .src_in(exr_d1));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \ACTIVE_LOW_EXT.ACT_LO_EXT_i_1 
-       (.I0(mb_debug_sys_rst),
-        .I1(ext_reset_in),
-        .O(exr_d1));
   FDRE #(
     .INIT(1'b0)) 
     \AUX_LPF[1].asr_lpf_reg[1] 
@@ -258,7 +257,7 @@ module block_design_rst_clk_wiz_1_100M_0_lpf
         .R(1'b0));
 endmodule
 
-(* C_AUX_RESET_HIGH = "1'b0" *) (* C_AUX_RST_WIDTH = "4" *) (* C_EXT_RESET_HIGH = "1'b0" *) 
+(* C_AUX_RESET_HIGH = "1'b0" *) (* C_AUX_RST_WIDTH = "4" *) (* C_EXT_RESET_HIGH = "1'b1" *) 
 (* C_EXT_RST_WIDTH = "4" *) (* C_FAMILY = "artix7" *) (* C_NUM_BUS_RST = "1" *) 
 (* C_NUM_INTERCONNECT_ARESETN = "1" *) (* C_NUM_PERP_ARESETN = "1" *) (* C_NUM_PERP_RST = "1" *) 
 module block_design_rst_clk_wiz_1_100M_0_proc_sys_reset

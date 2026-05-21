@@ -9,8 +9,8 @@
     "parameters": {
       "component_parameters": {
         "C_BASEADDR": [ { "value": "0x0000000000000000", "value_src": "propagated", "value_permission": "bd", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
-        "C_HIGHADDR": [ { "value": "0x0000000000003FFF", "value_src": "propagated", "value_permission": "bd", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
-        "C_MASK": [ { "value": "0x00000000c0014000", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "C_HIGHADDR": [ { "value": "0x0000000000001FFF", "value_src": "propagated", "value_permission": "bd", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "C_MASK": [ { "value": "0x0000000080000000", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "C_MASK1": [ { "value": "0x0000000000800000", "value_permission": "bd_and_user", "resolve_type": "user", "format": "bitString", "enabled": false, "usage": "all" } ],
         "C_MASK2": [ { "value": "0x0000000000800000", "value_permission": "bd_and_user", "resolve_type": "user", "format": "bitString", "enabled": false, "usage": "all" } ],
         "C_MASK3": [ { "value": "0x0000000000800000", "value_permission": "bd_and_user", "resolve_type": "user", "format": "bitString", "enabled": false, "usage": "all" } ],
@@ -50,10 +50,10 @@
       },
       "model_parameters": {
         "C_FAMILY": [ { "value": "artix7", "resolve_type": "generated", "usage": "all" } ],
-        "C_HIGHADDR": [ { "value": "0x0000000000003FFF", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "C_HIGHADDR": [ { "value": "0x0000000000001FFF", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
         "C_BASEADDR": [ { "value": "0x0000000000000000", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
         "C_NUM_LMB": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_MASK": [ { "value": "0x00000000c0014000", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "C_MASK": [ { "value": "0x0000000080000000", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
         "C_MASK1": [ { "value": "0x0000000000800000", "resolve_type": "generated", "format": "bitString", "enabled": false, "usage": "all" } ],
         "C_MASK2": [ { "value": "0x0000000000800000", "resolve_type": "generated", "format": "bitString", "enabled": false, "usage": "all" } ],
         "C_MASK3": [ { "value": "0x0000000000800000", "resolve_type": "generated", "format": "bitString", "enabled": false, "usage": "all" } ],
@@ -142,11 +142,11 @@
           "mode": "slave",
           "memory_map_ref": "SLMB",
           "parameters": {
-            "ADDR_WIDTH": [ { "value": "32", "value_src": "ip_propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "DATA_WIDTH": [ { "value": "32", "value_src": "ip_propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ADDR_WIDTH": [ { "value": "32", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "DATA_WIDTH": [ { "value": "32", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "READ_WRITE_MODE": [ { "value": "READ_WRITE", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
-            "PROTOCOL": [ { "value": "STANDARD", "value_src": "ip_propagated", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
-            "HAS_PROT": [ { "value": "0", "value_src": "ip_propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ]
+            "PROTOCOL": [ { "value": "STANDARD", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_PROT": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
             "ABUS": [ { "physical_name": "LMB_ABus" } ],
@@ -167,7 +167,7 @@
           "abstraction_type": "xilinx.com:interface:bram_rtl:1.0",
           "mode": "master",
           "parameters": {
-            "MEM_SIZE": [ { "value": "16384", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "usage": "all" } ],
+            "MEM_SIZE": [ { "value": "8192", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "usage": "all" } ],
             "MASTER_TYPE": [ { "value": "BRAM_CTRL", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
             "MEM_WIDTH": [ { "value": "32", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "MEM_ECC": [ { "value": "NONE", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
@@ -378,5 +378,5 @@
       }
     }
   },
-  "checksum": "fd749345"
+  "checksum": "b5c4729a"
 }

@@ -4,7 +4,6 @@ vhdl xil_defaultlib  \
 "../../../bd/block_design/ip/block_design_ilmb_v10_0/sim/block_design_ilmb_v10_0.vhd" \
 "../../../bd/block_design/ip/block_design_dlmb_bram_if_cntlr_0/sim/block_design_dlmb_bram_if_cntlr_0.vhd" \
 "../../../bd/block_design/ip/block_design_ilmb_bram_if_cntlr_0/sim/block_design_ilmb_bram_if_cntlr_0.vhd" \
-"../../../bd/block_design/ip/block_design_microblaze_riscv_0_axi_periph_0/bd_0/ip/ip_1/sim/bd_22f9_psr_aclk_0.vhd" \
 "../../../bd/block_design/ip/block_design_microblaze_riscv_0_axi_intc_0/sim/block_design_microblaze_riscv_0_axi_intc_0.vhd" \
 "../../../bd/block_design/ip/block_design_mdm_1_0/sim/block_design_mdm_1_0.vhd" \
 "../../../bd/block_design/ip/block_design_rst_clk_wiz_1_100M_0/sim/block_design_rst_clk_wiz_1_100M_0.vhd" \
@@ -22,6 +21,7 @@ vhdl xil_defaultlib  \
 "../../../bd/block_design/ipshared/374c/src/d_axi_i2s_audio_v2_0_AXI_L.vhd" \
 "../../../bd/block_design/ipshared/374c/src/d_axi_i2s_audio_v2_0.vhd" \
 "../../../bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/sim/block_design_d_axi_i2s_audio_0_0.vhd" \
+"../../../bd/block_design/ip/block_design_axi_uartlite_0_0/sim/block_design_axi_uartlite_0_0.vhd" \
 
 # Do not sort compile order
 nosort
