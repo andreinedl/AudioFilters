@@ -1,7 +1,7 @@
 sdt: hw_artifacts/microblaze_riscv_0_baremetal.dts
 family: artix7
 path: D:\Vivado\AudioFilters\vitis_workspace\audio_filters_platform\microblaze_riscv_0\standalone_microblaze_riscv_0\bsp
-config: default
+config: None
 os: standalone
 os_info:
   standalone:
@@ -59,7 +59,7 @@ os_config:
       name: standalone_stdin
       permission: read_write
       type: string
-      value: None;
+      value: axi_uartlite_0
       default: axi_uartlite_0
       options:
       - None
@@ -69,7 +69,7 @@ os_config:
       name: standalone_stdout
       permission: read_write
       type: string
-      value: None;
+      value: axi_uartlite_0
       default: axi_uartlite_0
       options:
       - None
