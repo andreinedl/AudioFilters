@@ -1,0 +1,148 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Mon May 18 09:08:26 2026
+| Host         : SPACESHIP running 64-bit major release  (build 9200)
+| Command      : report_incremental_reuse -file block_design_wrapper_incremental_reuse_routed.rpt
+| Design       : block_design_wrapper
+| Device       : xc7a200t
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Incremental Implementation Information
+
+Table of Contents
+-----------------
+1. Incremental Flow Summary
+2. Reuse Summary
+3. Reference Checkpoint Information
+4. Comparison with Reference Run
+5. Optimization Comparison With Reference Run
+5.1 iphys_opt_replay Optimizations
+5.2 QoR Suggestion Optimizations
+6. Command Comparison with Reference Run
+6.1 Reference:
+6.2 Incremental:
+7. Non Reuse Information
+
+1. Incremental Flow Summary
+---------------------------
+
++-----------------------+------------------+
+|    Flow Information   |       Value      |
++-----------------------+------------------+
+| Synthesis Flow        |          Default |
+| Auto Incremental      |              Yes |
+| Incremental Directive | RuntimeOptimized |
+| Target WNS            |              0.0 |
+| QoR Suggestions       |                0 |
++-----------------------+------------------+
+
+
+2. Reuse Summary
+----------------
+
++-------+------------------------------+------------------------------------+----------------------------+--------------------+--------+
+|  Type | Matched % (of Initial Total) | Initial Reuse % (of Initial Total) | Current Reuse % (of Total) | Fixed % (of Total) |  Total |
++-------+------------------------------+------------------------------------+----------------------------+--------------------+--------+
+| Cells |                        95.24 |                              95.27 |                      95.17 |               0.67 |  30542 |
+| Nets  |                        92.84 |                              92.11 |                      89.66 |               0.00 |  22893 |
+| Pins  |                            - |                              93.31 |                      86.42 |                  - | 123511 |
+| Ports |                       100.00 |                             100.00 |                     100.00 |             100.00 |     76 |
++-------+------------------------------+------------------------------------+----------------------------+--------------------+--------+
+
+
+3. Reference Checkpoint Information
+-----------------------------------
+
++----------------+-------------------------------------------------------------------------------------------------+
+| DCP Location:  | D:/Vivado/AudioFilters/AudioFilters.srcs/utils_1/imports/impl_1/block_design_wrapper_routed.dcp |
++----------------+-------------------------------------------------------------------------------------------------+
+
+
++--------------------------------+----------------------------+
+|         DCP Information        |            Value           |
++--------------------------------+----------------------------+
+| Vivado Version                 |                     2025.2 |
+| DCP State                      |                 POST_ROUTE |
+| Recorded WNS                   |                      0.321 |
+| Recorded WHS                   |                      0.014 |
+| Reference Speed File Version   | PRODUCTION 1.23 2018-06-13 |
+| Incremental Speed File Version | PRODUCTION 1.23 2018-06-13 |
++--------------------------------+----------------------------+
+* Recorded WNS/WHS timing numbers are estimated timing numbers. They may vary slightly from sign-off timing numbers.
+
+
+4. Comparison with Reference Run
+--------------------------------
+
++-----------------+---------------------------+---------------------------+---------------------------+
+|                 |          WNS(ns)          |  Runtime(elapsed)(hh:mm)  |    Runtime(cpu)(hh:mm)    |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| synth_design    |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| opt_design      |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| read_checkpoint |             |             |             |     < 1 min |             |       00:01 |
+| place_design    |       0.569 |       0.290 |       00:01 |     < 1 min |       00:02 |       00:01 |
+| phys_opt_design |       0.569 |       0.290 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| route_design    |       0.325 |       0.375 |       00:01 |       00:01 |       00:02 |       00:02 |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+5. Optimization Comparison With Reference Run
+---------------------------------------------
+
+5.1 iphys_opt_replay Optimizations
+----------------------------------
+
++-------------------------+--------+------------+
+| iphys_opt_design replay | Reused | Not Reused |
++-------------------------+--------+------------+
+
+
+5.2 QoR Suggestion Optimizations
+--------------------------------
+
++-----------------+-------+
+| QoR Suggestions | Value |
++-----------------+-------+
+
+
+6. Command Comparison with Reference Run
+----------------------------------------
+
+6.1 Reference:
+--------------
+synth_design-define default::[not_specified] -verilog_define default::[not_specified] -vhdl_define default::[not_specified] -top  block_design_wrapper -part  xc7a200tsbg484-1 
+opt_design
+read_checkpoint -incremental -auto_incremental D:/Vivado/AudioFilters/AudioFilters.srcs/utils_1/imports/impl_1/block_design_wrapper_routed.dcp
+place_design
+phys_opt_design
+route_design
+
+6.2 Incremental:
+----------------
+synth_design-define default::[not_specified] -verilog_define default::[not_specified] -vhdl_define default::[not_specified] -top  block_design_wrapper -part  xc7a200tsbg484-1 
+opt_design
+read_checkpoint -directive RuntimeOptimized  -incremental -auto_incremental D:/Vivado/AudioFilters/AudioFilters.srcs/utils_1/imports/impl_1/block_design_wrapper_routed.dcp
+place_design
+phys_opt_design
+route_design
+
+7. Non Reuse Information
+------------------------
+
++------------------------------------------------------+-------+
+|                         Type                         |   %   |
++------------------------------------------------------+-------+
+| Non-Reused Cells                                     |  4.82 |
+|   New                                                |  4.67 |
+|   Discarded illegal placement due to netlist changes |  0.01 |
+|   Discarded to improve timing                        |  0.14 |
+| Partially reused nets                                |  0.00 |
+| Non-Reused nets                                      | 10.33 |
+| Non-Reused Ports                                     |  0.00 |
++------------------------------------------------------+-------+
+
+

@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat May  2 12:30:11 2026
+# Process ID         : 51996
+# Current directory  : D:/Vivado/AudioFilters
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent36036 D:\Vivado\AudioFilters\AudioFilters.xpr
+# Log file           : D:/Vivado/AudioFilters/vivado.log
+# Journal file       : D:/Vivado/AudioFilters\vivado.jou
+# Running On         : SPACESHIP
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 5 7535HS with Radeon Graphics        
+# CPU Frequency      : 3294 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 16438 MB
+# Swap memory        : 8553 MB
+# Total Virtual      : 24992 MB
+# Available Virtual  : 8820 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/Vivado/AudioFilters/AudioFilters.xpr
+update_compile_order -fileset sources_1
+open_bd_design {D:/Vivado/AudioFilters/AudioFilters.srcs/sources_1/bd/block_design/block_design.bd}

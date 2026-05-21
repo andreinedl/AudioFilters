@@ -1,0 +1,1237 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon May 18 09:03:38 2026
+# Process ID         : 24596
+# Current directory  : D:/Vivado/AudioFilters/AudioFilters.runs/impl_1
+# Command line       : vivado.exe -log block_design_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source block_design_wrapper.tcl -notrace
+# Log file           : D:/Vivado/AudioFilters/AudioFilters.runs/impl_1/block_design_wrapper.vdi
+# Journal file       : D:/Vivado/AudioFilters/AudioFilters.runs/impl_1\vivado.jou
+# Running On         : SPACESHIP
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 5 7535HS with Radeon Graphics        
+# CPU Frequency      : 3294 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 16438 MB
+# Swap memory        : 14611 MB
+# Total Virtual      : 31049 MB
+# Available Virtual  : 14318 MB
+#-----------------------------------------------------------
+source block_design_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 587.973 ; gain = 255.402
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/AudioFilters/vivado-library'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vivado/AudioFilters/AudioFilters.ipdefs/repo/local/ip/d_axi_i2s_audio_v2_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2025.2/Vivado/data/ip'.
+Command: link_design -top block_design_wrapper -part xc7a200tsbg484-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/block_design_PmodOLED_0_0.dcp' for cell 'block_design_i/PmodOLED_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_dma_0_0/block_design_axi_dma_0_0.dcp' for cell 'block_design_i/axi_dma_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_gpio_0_0/block_design_axi_gpio_0_0.dcp' for cell 'block_design_i/axi_gpio_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_iic_0_0/block_design_axi_iic_0_0.dcp' for cell 'block_design_i/axi_iic_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_uartlite_0_0/block_design_axi_uartlite_0_0.dcp' for cell 'block_design_i/axi_uartlite_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/block_design_d_axi_i2s_audio_0_0.dcp' for cell 'block_design_i/d_axi_i2s_audio_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mdm_1_0/block_design_mdm_1_0.dcp' for cell 'block_design_i/mdm_1'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.dcp' for cell 'block_design_i/microblaze_riscv_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_axi_intc_0/block_design_microblaze_riscv_0_axi_intc_0.dcp' for cell 'block_design_i/microblaze_riscv_0_axi_intc'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mig_7series_0_0/block_design_mig_7series_0_0.dcp' for cell 'block_design_i/mig_7series_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_rst_clk_wiz_1_100M_0/block_design_rst_clk_wiz_1_100M_0.dcp' for cell 'block_design_i/rst_clk_wiz_1_100M'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_interconnect_0_imp_xbar_0/block_design_axi_interconnect_0_imp_xbar_0.dcp' for cell 'block_design_i/axi_interconnect_0/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_interconnect_1_imp_xbar_0/block_design_axi_interconnect_1_imp_xbar_0.dcp' for cell 'block_design_i/axi_interconnect_1/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_dlmb_bram_if_cntlr_0/block_design_dlmb_bram_if_cntlr_0.dcp' for cell 'block_design_i/microblaze_riscv_0_local_memory/dlmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_dlmb_v10_0/block_design_dlmb_v10_0.dcp' for cell 'block_design_i/microblaze_riscv_0_local_memory/dlmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_ilmb_bram_if_cntlr_0/block_design_ilmb_bram_if_cntlr_0.dcp' for cell 'block_design_i/microblaze_riscv_0_local_memory/ilmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_ilmb_v10_0/block_design_ilmb_v10_0.dcp' for cell 'block_design_i/microblaze_riscv_0_local_memory/ilmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'd:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_lmb_bram_0/block_design_lmb_bram_0.dcp' for cell 'block_design_i/microblaze_riscv_0_local_memory/lmb_bram'
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.610 . Memory (MB): peak = 1032.812 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1013 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc] for cell 'block_design_i/microblaze_riscv_0/U0'
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:4]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:4]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:4]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I4/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:4]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:7]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:7]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:7]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-1' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I4/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:7]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:10]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:10]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:10]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I4/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:10]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:13]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:13]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:13]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPIP-2' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I4/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:13]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-1' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:16]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-1' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:16]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-1' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:16]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-1' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I4/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:16]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-2' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:19]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-2' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:19]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-2' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:19]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-2' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I4/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:19]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:22]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:22]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:22]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I4/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:22]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:25]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:25]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:25]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I4/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:25]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:28]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:28]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:28]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-3' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I4/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:28]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:31]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:31]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:31]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I4/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:31]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:34]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:34]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:34]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I4/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:34]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I1/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:37]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I2/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:37]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I3/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:37]
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'DPOP-4' object list specifies likely unusable hierarchical instance 'block_design_i/microblaze_riscv_0/U0/riscv_core_I/Base.Core/Data_Flow_I/MUL_Unit_I/Use_HW_MUL.RV32_MUL.Using_DSP48_Architectures.dsp_module_I4/Using_DSP48E1.DSP48E1_I1'. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc:37]
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/block_design_microblaze_riscv_0_0.xdc] for cell 'block_design_i/microblaze_riscv_0/U0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_axi_intc_0/block_design_microblaze_riscv_0_axi_intc_0.xdc] for cell 'block_design_i/microblaze_riscv_0_axi_intc/U0'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_axi_intc_0/block_design_microblaze_riscv_0_axi_intc_0.xdc] for cell 'block_design_i/microblaze_riscv_0_axi_intc/U0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_rst_clk_wiz_1_100M_0/block_design_rst_clk_wiz_1_100M_0_board.xdc] for cell 'block_design_i/rst_clk_wiz_1_100M/U0'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_rst_clk_wiz_1_100M_0/block_design_rst_clk_wiz_1_100M_0_board.xdc] for cell 'block_design_i/rst_clk_wiz_1_100M/U0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mig_7series_0_0/block_design_mig_7series_0_0/user_design/constraints/block_design_mig_7series_0_0.xdc] for cell 'block_design_i/mig_7series_0'
+INFO: [Vivado 12-4777] Setting CLOCK_DEDICATED_ROUTE constraint on the PARENT net instead of the specified net segment (net name: block_design_i/mig_7series_0/sys_clk_i). Placer only honors CLOCK_DEDICATED_ROUTE when set on the PARENT net, e.g. net segment directly connected to the driver. To eliminate this message, please update your constraint to specify the PARENT net instead. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mig_7series_0_0/block_design_mig_7series_0_0/user_design/constraints/block_design_mig_7series_0_0.xdc:41]
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mig_7series_0_0/block_design_mig_7series_0_0/user_design/constraints/block_design_mig_7series_0_0.xdc] for cell 'block_design_i/mig_7series_0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_axi_gpio_0_0/PmodOLED_axi_gpio_0_0_board.xdc] for cell 'block_design_i/PmodOLED_0/inst/axi_gpio_0/U0'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_axi_gpio_0_0/PmodOLED_axi_gpio_0_0_board.xdc] for cell 'block_design_i/PmodOLED_0/inst/axi_gpio_0/U0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_axi_quad_spi_0_0/PmodOLED_axi_quad_spi_0_0_board.xdc] for cell 'block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_axi_quad_spi_0_0/PmodOLED_axi_quad_spi_0_0_board.xdc] for cell 'block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_axi_quad_spi_0_0/PmodOLED_axi_quad_spi_0_0.xdc] for cell 'block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_axi_quad_spi_0_0/PmodOLED_axi_quad_spi_0_0.xdc] for cell 'block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_pmod_bridge_0_0/PmodOLED_pmod_bridge_0_0_board.xdc] for cell 'block_design_i/PmodOLED_0/inst/pmod_bridge_0/inst'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_pmod_bridge_0_0/PmodOLED_pmod_bridge_0_0_board.xdc] for cell 'block_design_i/PmodOLED_0/inst/pmod_bridge_0/inst'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/block_design_PmodOLED_0_0_board.xdc] for cell 'block_design_i/PmodOLED_0/inst'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/block_design_PmodOLED_0_0_board.xdc] for cell 'block_design_i/PmodOLED_0/inst'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_dma_0_0/block_design_axi_dma_0_0.xdc] for cell 'block_design_i/axi_dma_0/U0'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_dma_0_0/block_design_axi_dma_0_0.xdc] for cell 'block_design_i/axi_dma_0/U0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_iic_0_0/block_design_axi_iic_0_0_board.xdc] for cell 'block_design_i/axi_iic_0/U0'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_iic_0_0/block_design_axi_iic_0_0_board.xdc] for cell 'block_design_i/axi_iic_0/U0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_gpio_0_0/block_design_axi_gpio_0_0_board.xdc] for cell 'block_design_i/axi_gpio_0/U0'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_gpio_0_0/block_design_axi_gpio_0_0_board.xdc] for cell 'block_design_i/axi_gpio_0/U0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/fifo_4/fifo_4.xdc] for cell 'block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/fifo_4/fifo_4.xdc] for cell 'block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/fifo_32/fifo_32.xdc] for cell 'block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/fifo_32/fifo_32.xdc] for cell 'block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/fifo_32/fifo_32.xdc] for cell 'block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/fifo_32/fifo_32.xdc] for cell 'block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/d_axi_i2s_audio.xdc] for cell 'block_design_i/d_axi_i2s_audio_0/U0'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/d_axi_i2s_audio.xdc] for cell 'block_design_i/d_axi_i2s_audio_0/U0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_uartlite_0_0/block_design_axi_uartlite_0_0_board.xdc] for cell 'block_design_i/axi_uartlite_0/U0'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_uartlite_0_0/block_design_axi_uartlite_0_0_board.xdc] for cell 'block_design_i/axi_uartlite_0/U0'
+Parsing XDC File [D:/Vivado/AudioFilters/AudioFilters.srcs/constrs_1/new/Nexys_Video.xdc]
+Finished Parsing XDC File [D:/Vivado/AudioFilters/AudioFilters.srcs/constrs_1/new/Nexys_Video.xdc]
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_axi_intc_0/block_design_microblaze_riscv_0_axi_intc_0_clocks.xdc] for cell 'block_design_i/microblaze_riscv_0_axi_intc/U0'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_axi_intc_0/block_design_microblaze_riscv_0_axi_intc_0_clocks.xdc] for cell 'block_design_i/microblaze_riscv_0_axi_intc/U0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mdm_1_0/block_design_mdm_1_0.xdc] for cell 'block_design_i/mdm_1/U0'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mdm_1_0/block_design_mdm_1_0.xdc:5]
+INFO: [Timing 38-2] Deriving generated clocks [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mdm_1_0/block_design_mdm_1_0.xdc:5]
+get_clocks: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1799.172 ; gain = 579.512
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-1' -from list should not be empty. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mdm_1_0/block_design_mdm_1_0.xdc:30]
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-1' -from list should not be empty. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mdm_1_0/block_design_mdm_1_0.xdc:31]
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-2' -from list should not be empty. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mdm_1_0/block_design_mdm_1_0.xdc:39]
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-7' -from list should not be empty. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mdm_1_0/block_design_mdm_1_0.xdc:40]
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-10' -from list should not be empty. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mdm_1_0/block_design_mdm_1_0.xdc:41]
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-11' -from list should not be empty. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mdm_1_0/block_design_mdm_1_0.xdc:42]
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-13' -from list should not be empty. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mdm_1_0/block_design_mdm_1_0.xdc:46]
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-15' -from list should not be empty. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mdm_1_0/block_design_mdm_1_0.xdc:48]
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-15' -from list should not be empty. [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mdm_1_0/block_design_mdm_1_0.xdc:49]
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_mdm_1_0/block_design_mdm_1_0.xdc] for cell 'block_design_i/mdm_1/U0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_axi_quad_spi_0_0/PmodOLED_axi_quad_spi_0_0_clocks.xdc] for cell 'block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_PmodOLED_0_0/src/PmodOLED_axi_quad_spi_0_0/PmodOLED_axi_quad_spi_0_0_clocks.xdc] for cell 'block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_dma_0_0/block_design_axi_dma_0_0_clocks.xdc] for cell 'block_design_i/axi_dma_0/U0'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_axi_dma_0_0/block_design_axi_dma_0_0_clocks.xdc] for cell 'block_design_i/axi_dma_0/U0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/fifo_4/fifo_4_clocks.xdc] for cell 'block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/fifo_4/fifo_4_clocks.xdc] for cell 'block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_Sampling/U0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/fifo_32/fifo_32_clocks.xdc] for cell 'block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/fifo_32/fifo_32_clocks.xdc] for cell 'block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sRxFifo/U0'
+Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/fifo_32/fifo_32_clocks.xdc] for cell 'block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0'
+Finished Parsing XDC File [d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_d_axi_i2s_audio_0_0/src/fifo_32/fifo_32_clocks.xdc] for cell 'block_design_i/d_axi_i2s_audio_0/U0/d_axi_i2s_audio_v2_0_AXI_L_inst/Inst_I2sCtl/Inst_I2sTxFifo/U0'
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/AMDDesignTools/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Project 1-1714] 76 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+WARNING: [Constraints 18-5572] Instance block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO1_I_REG has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+Generating merged BMM file for the design top 'block_design_wrapper'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: d:/Vivado/AudioFilters/AudioFilters.gen/sources_1/bd/block_design/ip/block_design_microblaze_riscv_0_0/data/riscv_bootloop.elf 
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1799.172 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 318 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 8 instances
+  IOBUFDS_DIFF_OUT_INTERMDISABLE => IOBUFDS_DIFF_OUT_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 2 instances
+  IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 88 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 32 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 132 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 39 instances
+
+35 Infos, 66 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1799.172 ; gain = 1105.180
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.918 . Memory (MB): peak = 1799.172 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 2e45948a8
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1799.172 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 2e45948a8
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2246.316 ; gain = 0.000
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 2e45948a8
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 2246.316 ; gain = 0.000
+Phase 1 Initialization | Checksum: 2e45948a8
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 2246.316 ; gain = 0.000
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Detect if minReqCache needed
+Phase 2.1 Detect if minReqCache needed | Checksum: 2e45948a8
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.117 . Memory (MB): peak = 2246.340 ; gain = 0.023
+
+Phase 2.2 Timer Update
+Phase 2.2 Timer Update | Checksum: 2e45948a8
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.676 . Memory (MB): peak = 2246.340 ; gain = 0.023
+
+Phase 2.3 Timing Data Collection
+Phase 2.3 Timing Data Collection | Checksum: 2e45948a8
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.715 . Memory (MB): peak = 2246.340 ; gain = 0.023
+Phase 2 Timer Update And Timing Data Collection | Checksum: 2e45948a8
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.719 . Memory (MB): peak = 2246.340 ; gain = 0.023
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 25 inverters resulting in an inversion of 219 pins
+INFO: [Opt 31-138] Pushed 11 inverter(s) to 17 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 14d9d2e77
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2246.340 ; gain = 0.023
+Retarget | Checksum: 14d9d2e77
+INFO: [Opt 31-389] Phase Retarget created 324 cells and removed 596 cells
+INFO: [Opt 31-1021] In phase Retarget, 57 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 4 inverter(s) to 17 load pin(s).
+Phase 4 Constant propagation | Checksum: c7b65882
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2246.340 ; gain = 0.023
+Constant propagation | Checksum: c7b65882
+INFO: [Opt 31-389] Phase Constant propagation created 125 cells and removed 395 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 19 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2246.340 ; gain = 0.000
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2246.340 ; gain = 0.000
+Phase 5 Sweep | Checksum: 176b6138a
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2246.340 ; gain = 0.023
+Sweep | Checksum: 176b6138a
+INFO: [Opt 31-389] Phase Sweep created 4 cells and removed 454 cells
+INFO: [Opt 31-1021] In phase Sweep, 49 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 6 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG block_design_i/mdm_1/U0/Use_E2.BSCAN_I/tck_BUFG_inst to drive 51 load(s) on clock net block_design_i/mdm_1/U0/Use_E2.BSCAN_I/tck_BUFG
+INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
+Phase 6 BUFG optimization | Checksum: 1e86c4503
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2246.340 ; gain = 0.023
+BUFG optimization | Checksum: 1e86c4503
+INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 1 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 1e86c4503
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2246.340 ; gain = 0.023
+Shift Register Optimization | Checksum: 1e86c4503
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 20462b063
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2246.340 ; gain = 0.023
+Post Processing Netlist | Checksum: 20462b063
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 21 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 2e6c8c257
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2246.340 ; gain = 0.023
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 2246.340 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 2e6c8c257
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2246.340 ; gain = 0.023
+Phase 9 Finalization | Checksum: 2e6c8c257
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2246.340 ; gain = 0.023
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             324  |             596  |                                             57  |
+|  Constant propagation         |             125  |             395  |                                             19  |
+|  Sweep                        |               4  |             454  |                                             49  |
+|  BUFG optimization            |               1  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             21  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 2e6c8c257
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2246.340 ; gain = 0.023
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 6 BRAM(s) out of a total of 35 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-201] Structural ODC has moved 14 WE to EN ports
+Number of BRAM Ports augmented: 6 newly gated: 22 Total Ports: 70
+Ending PowerOpt Patch Enables Task | Checksum: 1d463703a
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1d463703a
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2344.012 ; gain = 97.672
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1d463703a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 2344.012 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+69 Infos, 66 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 2344.012 ; gain = 544.840
+INFO: [Vivado 12-24828] Executing command : report_drc -file block_design_wrapper_drc_opted.rpt -pb block_design_wrapper_drc_opted.pb -rpx block_design_wrapper_drc_opted.rpx
+Command: report_drc -file block_design_wrapper_drc_opted.rpt -pb block_design_wrapper_drc_opted.pb -rpx block_design_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file D:/Vivado/AudioFilters/AudioFilters.runs/impl_1/block_design_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 2344.012 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/AudioFilters/AudioFilters.runs/impl_1/block_design_wrapper_opt.dcp' has been generated.
+Command: read_checkpoint -auto_incremental -incremental D:/Vivado/AudioFilters/AudioFilters.srcs/utils_1/imports/impl_1/block_design_wrapper_routed.dcp
+INFO: [Vivado 12-9151] Incremental flow is being run with directive 'RuntimeOptimized'. This will override place_design, post-place phys_opt_design and route_design directives.
+
+Starting Incremental read checkpoint Task
+
+Phase 1 Process Reference Checkpoint Netlist
+INFO: [Netlist 29-17] Analyzing 1210 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2344.012 ; gain = 0.000
+
+Phase 2 Initialization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 2344.012 ; gain = 0.000
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 2344.012 ; gain = 0.000
+
+Phase 3 Replay Physical Synthesis Transforms
+INFO: [Vivado_Tcl 4-521] iPhys_opt_design summary: tried 0 changes and 0 changes are successfully applied
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 2344.012 ; gain = 0.000
+
+Phase 4 Build Reuse DB
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.087 . Memory (MB): peak = 2344.012 ; gain = 0.000
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Read placeStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Read Physdb Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Finished XDEF File Restore: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2344.012 ; gain = 0.000
+INFO: [Designutils 20-2297] Reference Design: D:/Vivado/AudioFilters/AudioFilters.srcs/utils_1/imports/impl_1/block_design_wrapper_routed.dcp, Summary | WNS = 0.321 | WHS = 0.014 | State = POST_ROUTE |
+WARNING: [Constraints 18-11856] Placement from XDEF will be used for instance block_design_i/mdm_1/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I of type BSCAN.
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:38 . Memory (MB): peak = 2344.012 ; gain = 0.000
+
+Phase 5 Checking legality
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Read Netlist Cache: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.034 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Read RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.832 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Read Physdb Files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.890 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.891 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Phase 5 Checking legality | Checksum: 20ae6df1c
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:46 . Memory (MB): peak = 2344.012 ; gain = 0.000
+
+Phase 6 Reporting
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Mon May 18 09:05:26 2026
+| Host         : SPACESHIP running 64-bit major release  (build 9200)
+| Design       : block_design_wrapper
+| Device       : xc7a200t
+| Design State : Unknown
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Incremental Implementation Information
+
+Table of Contents
+-----------------
+1. Incremental Flow Summary
+2. Reuse Summary
+3. Reference Checkpoint Information
+4. Comparison with Reference Run
+5. Optimization Comparison With Reference Run
+5.1 iphys_opt_replay Optimizations
+5.2 QoR Suggestion Optimizations
+6. Command Comparison with Reference Run
+6.1 Reference:
+6.2 Incremental:
+7. Non Reuse Information
+
+1. Incremental Flow Summary
+---------------------------
+
++-----------------------+------------------+
+|    Flow Information   |       Value      |
++-----------------------+------------------+
+| Synthesis Flow        |          Default |
+| Auto Incremental      |              Yes |
+| Incremental Directive | RuntimeOptimized |
+| Target WNS            |              0.0 |
+| QoR Suggestions       |                0 |
++-----------------------+------------------+
+
+
+2. Reuse Summary
+----------------
+
++-------+----------------------+----------------------------+--------------------+--------+
+|  Type | Matched % (of Total) | Current Reuse % (of Total) | Fixed % (of Total) |  Total |
++-------+----------------------+----------------------------+--------------------+--------+
+| Cells |                95.24 |                      95.27 |               0.67 |  30542 |
+| Nets  |                92.84 |                      92.11 |               0.00 |  22862 |
+| Pins  |                    - |                      93.31 |                  - | 123455 |
+| Ports |               100.00 |                     100.00 |             100.00 |     76 |
++-------+----------------------+----------------------------+--------------------+--------+
+* Reused % can exceed matched % when unmatched cells take their placement directly from other cells that have been matched
+
+
+3. Reference Checkpoint Information
+-----------------------------------
+
++----------------+-------------------------------------------------------------------------------------------------+
+| DCP Location:  | D:/Vivado/AudioFilters/AudioFilters.srcs/utils_1/imports/impl_1/block_design_wrapper_routed.dcp |
++----------------+-------------------------------------------------------------------------------------------------+
+
+
++--------------------------------+----------------------------+
+|         DCP Information        |            Value           |
++--------------------------------+----------------------------+
+| Vivado Version                 |                     2025.2 |
+| DCP State                      |                 POST_ROUTE |
+| Recorded WNS                   |                      0.321 |
+| Recorded WHS                   |                      0.014 |
+| Reference Speed File Version   | PRODUCTION 1.23 2018-06-13 |
+| Incremental Speed File Version | PRODUCTION 1.23 2018-06-13 |
++--------------------------------+----------------------------+
+* Recorded WNS/WHS timing numbers are estimated timing numbers. They may vary slightly from sign-off timing numbers.
+
+
+4. Comparison with Reference Run
+--------------------------------
+
++-----------------+---------------------------+---------------------------+---------------------------+
+|                 |          WNS(ns)          |  Runtime(elapsed)(hh:mm)  |    Runtime(cpu)(hh:mm)    |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| synth_design    |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| opt_design      |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| read_checkpoint |             |             |             |             |             |             |
+| place_design    |       0.569 |             |       00:01 |             |       00:02 |             |
+| phys_opt_design |       0.569 |             |     < 1 min |             |     < 1 min |             |
+| route_design    |       0.325 |             |       00:01 |             |       00:02 |             |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+5. Optimization Comparison With Reference Run
+---------------------------------------------
+
+5.1 iphys_opt_replay Optimizations
+----------------------------------
+
++-------------------------+--------+------------+
+| iphys_opt_design replay | Reused | Not Reused |
++-------------------------+--------+------------+
+
+
+5.2 QoR Suggestion Optimizations
+--------------------------------
+
++-----------------+-------+
+| QoR Suggestions | Value |
++-----------------+-------+
+
+
+6. Command Comparison with Reference Run
+----------------------------------------
+
+6.1 Reference:
+--------------
+synth_design-define default::[not_specified] -verilog_define default::[not_specified] -vhdl_define default::[not_specified] -top  block_design_wrapper -part  xc7a200tsbg484-1 
+opt_design
+read_checkpoint -incremental -auto_incremental D:/Vivado/AudioFilters/AudioFilters.srcs/utils_1/imports/impl_1/block_design_wrapper_routed.dcp
+place_design
+phys_opt_design
+route_design
+
+6.2 Incremental:
+----------------
+synth_design-define default::[not_specified] -verilog_define default::[not_specified] -vhdl_define default::[not_specified] -top  block_design_wrapper -part  xc7a200tsbg484-1 
+opt_design
+read_checkpoint -directive RuntimeOptimized  -incremental -auto_incremental D:/Vivado/AudioFilters/AudioFilters.srcs/utils_1/imports/impl_1/block_design_wrapper_routed.dcp
+
+7. Non Reuse Information
+------------------------
+
++------------------------------------------------------+------+
+|                         Type                         |   %  |
++------------------------------------------------------+------+
+| Non-Reused Cells                                     | 4.72 |
+|   New                                                | 4.67 |
+|   Discarded illegal placement due to netlist changes | 0.01 |
+|   Discarded to improve timing                        | 0.04 |
+| Partially reused nets                                | 0.83 |
+| Non-Reused nets                                      | 7.04 |
+| Non-Reused Ports                                     | 0.00 |
++------------------------------------------------------+------+
+
+
+
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:47 . Memory (MB): peak = 2344.012 ; gain = 0.000
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:47 . Memory (MB): peak = 2344.012 ; gain = 0.000
+read_checkpoint: Time (s): cpu = 00:01:00 ; elapsed = 00:00:47 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-83] Releasing license: Implementation
+
+Starting Incremental Placer Task
+INFO: [Vivado_Tcl 4-24] Running Incremental Placer flow for unplaced cells using reference design-checkpoint 'D:/Vivado/AudioFilters/AudioFilters.srcs/utils_1/imports/impl_1/block_design_wrapper_routed.dcp'.
+INFO: [Place 46-44] place_design is using directive Default with target WNS of 0 ns.
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 2344.012 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 20ae6df1c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.175 . Memory (MB): peak = 2344.012 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+CRITICAL WARNING: [Place 30-73] Invalid constraint on register 'block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO1_I_REG'. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 20ae6df1c
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2344.012 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1f39dfbfd
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 2382.344 ; gain = 38.332
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1f39dfbfd
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 2382.344 ; gain = 38.332
+Phase 1 Placer Initialization | Checksum: 1f39dfbfd
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 2382.344 ; gain = 38.332
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 233d2097d
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 2382.344 ; gain = 38.332
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 233d2097d
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 2384.043 ; gain = 40.031
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 18763b622
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 2384.043 ; gain = 40.031
+
+Phase 2.4 Global Place Phase1
+Phase 2.4 Global Place Phase1 | Checksum: 161edab91
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:29 . Memory (MB): peak = 2439.531 ; gain = 95.520
+
+Phase 2.5 Global Place Phase2
+Phase 2.5 Global Place Phase2 | Checksum: 1c5ee40d9
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:31 . Memory (MB): peak = 2439.531 ; gain = 95.520
+Phase 2 Global Placement | Checksum: 1c5ee40d9
+
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:31 . Memory (MB): peak = 2439.531 ; gain = 95.520
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1d144b249
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:32 . Memory (MB): peak = 2439.531 ; gain = 95.520
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1b460cd32
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:34 . Memory (MB): peak = 2439.531 ; gain = 95.520
+
+Phase 3.3 Place Remaining
+Phase 3.3 Place Remaining | Checksum: 16588bc42
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:37 . Memory (MB): peak = 2439.531 ; gain = 95.520
+Phase 3 Detail Placement | Checksum: 1a9b30cb7
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:41 . Memory (MB): peak = 2439.531 ; gain = 95.520
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 16ecd5bda
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.217 | TNS=-0.503 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1d3bff975
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.552 . Memory (MB): peak = 2439.531 ; gain = 0.000
+INFO: [Place 46-33] Processed net block_design_i/microblaze_riscv_0/U0/riscv_core_I/sync_reset, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 1, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 21be4e997
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.940 . Memory (MB): peak = 2439.531 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 16ecd5bda
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:46 . Memory (MB): peak = 2439.531 ; gain = 95.520
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.290. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 22ec49037
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:49 . Memory (MB): peak = 2439.531 ; gain = 95.520
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:49 . Memory (MB): peak = 2439.531 ; gain = 95.520
+Phase 4.1 Post Commit Optimization | Checksum: 22ec49037
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:50 . Memory (MB): peak = 2439.531 ; gain = 95.520
+
+Phase 4.2 Sweep Clock Roots: Post-Placement
+Phase 4.2 Sweep Clock Roots: Post-Placement | Checksum: 22ec49037
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:50 . Memory (MB): peak = 2439.531 ; gain = 95.520
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|              16x16|              16x16|
+|___________|___________________|___________________|
+|      South|              16x16|              16x16|
+|___________|___________________|___________________|
+|       East|              16x16|              16x16|
+|___________|___________________|___________________|
+|       West|              16x16|              16x16|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 26b84f74e
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:00:55 . Memory (MB): peak = 2458.973 ; gain = 114.961
+Phase 4.3 Placer Reporting | Checksum: 26b84f74e
+
+Time (s): cpu = 00:01:23 ; elapsed = 00:00:55 . Memory (MB): peak = 2458.973 ; gain = 114.961
+
+Phase 4.4 Post Placement Cleanup
+Phase 4.4 Post Placement Cleanup | Checksum: 26b84f74e
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:55 . Memory (MB): peak = 2458.973 ; gain = 114.961
+
+Phase 4.5 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 2458.973 ; gain = 0.000
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:55 . Memory (MB): peak = 2458.973 ; gain = 114.961
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 209139c1c
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:56 . Memory (MB): peak = 2458.973 ; gain = 114.961
+INFO: [Place 46-3] During incremental compilation, routing data from the original checkpoint is applied during place_design. As a result, dangling route segments and route conflicts may appear in the post place_design implementation due to changes between the original and incremental netlists. These routes can be ignored as they will be subsequently resolved by route_design. This issue will be cleaned up automatically in place_design in a future software release.
+
++-------------------------------------------------------------------------------+
+|Incremental Placement Summary                                                  |
++-------------------------------------------------------------------------------+
+|                          Type                           | Count  | Percentage |
++-------------------------------------------------------------------------------+
+|  Total instances                                        |  30542 |     100.00 |
+|  Reused instances                                       |  29067 |      95.17 |
+|  Non-reused instances                                   |   1475 |       4.82 |
+|    New                                                  |   1429 |       4.67 |
+|    Discarded illegal placement due to netlist changes   |      1 |       0.01 |
+|    Discarded to improve timing                          |     45 |       0.14 |
++-------------------------------------------------------------------------------+
+|Incremental Placement Runtime Summary                                          |
++-------------------------------------------------------------------------------+
+|  Initialization time(elapsed secs)                                   |  12.05 |
+|  Incremental Placer time(elapsed secs)                               |  43.51 |
++-------------------------------------------------------------------------------+
+
+Reference - Incremental Comparison Summary
+
+1. Comparison with Reference Run
+--------------------------------
+
++-----------------+---------------------------+---------------------------+---------------------------+
+|                 |          WNS(ns)          |  Runtime(elapsed)(hh:mm)  |    Runtime(cpu)(hh:mm)    |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| synth_design    |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| opt_design      |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| read_checkpoint |             |             |             |     < 1 min |             |       00:01 |
+| place_design    |       0.569 |       0.290 |       00:01 |     < 1 min |       00:02 |       00:01 |
+| phys_opt_design |       0.569 |             |     < 1 min |             |     < 1 min |             |
+| route_design    |       0.325 |             |       00:01 |             |       00:02 |             |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+Ending Incremental Placer Task | Checksum: 15e7af276
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:56 . Memory (MB): peak = 2458.973 ; gain = 114.961
+95 Infos, 67 Warnings, 1 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:01:24 ; elapsed = 00:00:56 . Memory (MB): peak = 2458.973 ; gain = 114.961
+INFO: [Vivado 12-24838] Running report commands "report_control_sets, report_io, report_utilization" in parallel.
+Running report generation with 2 threads.
+INFO: [Vivado 12-24828] Executing command : report_io -file block_design_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.131 . Memory (MB): peak = 2458.973 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file block_design_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.108 . Memory (MB): peak = 2458.973 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_utilization -file block_design_wrapper_utilization_placed.rpt -pb block_design_wrapper_utilization_placed.pb
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2458.973 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2458.973 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 2458.973 ; gain = 0.000
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.232 . Memory (MB): peak = 2458.973 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2458.973 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 2458.973 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2458.973 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 2458.973 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/AudioFilters/AudioFilters.runs/impl_1/block_design_wrapper_placed.dcp' has been generated.
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2458.973 ; gain = 0.000
+INFO: [Vivado_Tcl 4-2279] Estimated Timing Summary | WNS= 0.290 | TNS= 0.000 | 
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. All physical synthesis setup optimizations will be skipped.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+
+Reference - Incremental Comparison Summary
+
+1. Comparison with Reference Run
+--------------------------------
+
++-----------------+---------------------------+---------------------------+---------------------------+
+|                 |          WNS(ns)          |  Runtime(elapsed)(hh:mm)  |    Runtime(cpu)(hh:mm)    |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| synth_design    |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| opt_design      |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| read_checkpoint |             |             |             |     < 1 min |             |       00:01 |
+| place_design    |       0.569 |       0.290 |       00:01 |     < 1 min |       00:02 |       00:01 |
+| phys_opt_design |       0.569 |       0.290 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| route_design    |       0.325 |             |       00:01 |             |       00:02 |             |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+INFO: [Common 17-83] Releasing license: Implementation
+106 Infos, 67 Warnings, 1 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2458.973 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2458.973 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 2458.973 ; gain = 0.000
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.236 . Memory (MB): peak = 2458.973 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2458.973 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2458.973 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2458.973 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 2458.973 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/AudioFilters/AudioFilters.runs/impl_1/block_design_wrapper_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+cleanRouteStorageTime (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2458.973 ; gain = 0.000
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Starting Incremental Route Task
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 8c56b4a2 ConstDB: 0 ShapeSum: 6889398a RouteDB: e64d7f36
+Phase 1 Build RT Design | Checksum: 1a4ccff75
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:53 . Memory (MB): peak = 2547.227 ; gain = 88.254
+Post Restoration Checksum: NetGraph: 3120f756 | NumContArr: 9164fdd | Constraints: c2a8fa9d | Timing: c2a8fa9d
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 1bf893c6d
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:53 . Memory (MB): peak = 2553.121 ; gain = 94.148
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 30f7b96ae
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:54 . Memory (MB): peak = 2553.121 ; gain = 94.148
+--------------------------------------------------------
+|Incremental Routing Reuse Summary                      |
+--------------------------------------------------------
+|Type                     | Count    | Percentage       |
+--------------------------------------------------------
+|Fully reused nets        |     21873|            92.01 |
+|Partially reused nets    |       265|             1.11 |
+|Non-reused nets          |      1635|             6.88 |
+--------------------------------------------------------
+INFO: [Route 35-559] route_design is using directive Default with target WNS of 0.0ns
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 2ac423161
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:01:04 . Memory (MB): peak = 2624.910 ; gain = 165.938
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.238  | TNS=0.000  | WHS=-0.347 | THS=-368.301|
+
+
+Phase 2.4 Update Timing for Bus Skew
+
+Phase 2.4.1 Update Timing
+Phase 2.4.1 Update Timing | Checksum: 22b88f9d9
+
+Time (s): cpu = 00:01:26 ; elapsed = 00:01:08 . Memory (MB): peak = 2624.910 ; gain = 165.938
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.238  | TNS=0.000  | WHS=0.015  | THS=0.000  |
+
+Phase 2.4 Update Timing for Bus Skew | Checksum: 242a25f42
+
+Time (s): cpu = 00:01:26 ; elapsed = 00:01:08 . Memory (MB): peak = 2624.910 ; gain = 165.938
+
+Phase 2.5 Soft Constraint Pins - Fast Budgeting
+Phase 2.5 Soft Constraint Pins - Fast Budgeting | Checksum: 242a25f42
+
+Time (s): cpu = 00:01:26 ; elapsed = 00:01:08 . Memory (MB): peak = 2649.961 ; gain = 190.988
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00117421 %
+  Global Horizontal Routing Utilization  = 0.00185063 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 1900
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 1635
+  Number of Partially Routed Nets     = 265
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 2a49fb45f
+
+Time (s): cpu = 00:01:27 ; elapsed = 00:01:09 . Memory (MB): peak = 2649.961 ; gain = 190.988
+
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: 2a49fb45f
+
+Time (s): cpu = 00:01:27 ; elapsed = 00:01:09 . Memory (MB): peak = 2649.961 ; gain = 190.988
+
+Phase 4 Initial Routing
+
+Phase 4.1 Initial Net Routing Pass
+Phase 4.1 Initial Net Routing Pass | Checksum: 226fc368b
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:09 . Memory (MB): peak = 2649.961 ; gain = 190.988
+Phase 4 Initial Routing | Checksum: 226fc368b
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:09 . Memory (MB): peak = 2649.961 ; gain = 190.988
+
+Phase 5 Initial Route for Timing
+
+Phase 5.1 Update Timing
+Phase 5.1 Update Timing | Checksum: 223e287c2
+
+Time (s): cpu = 00:01:31 ; elapsed = 00:01:11 . Memory (MB): peak = 2649.961 ; gain = 190.988
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.246  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+
+Phase 5.2 Fast Budgeting
+Phase 5.2 Fast Budgeting | Checksum: 2a347b03d
+
+Time (s): cpu = 00:01:31 ; elapsed = 00:01:12 . Memory (MB): peak = 2656.777 ; gain = 197.805
+Phase 5 Initial Route for Timing | Checksum: 1e54886ab
+
+Time (s): cpu = 00:01:32 ; elapsed = 00:01:12 . Memory (MB): peak = 2656.777 ; gain = 197.805
+
+Phase 6 Rip-up And Reroute
+
+Phase 6.1 Global Iteration 0
+ Number of Nodes with overlaps = 190
+ Number of Nodes with overlaps = 184
+ Number of Nodes with overlaps = 97
+ Number of Nodes with overlaps = 47
+ Number of Nodes with overlaps = 28
+ Number of Nodes with overlaps = 14
+ Number of Nodes with overlaps = 14
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.292  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 6.1 Global Iteration 0 | Checksum: 230691076
+
+Time (s): cpu = 00:01:43 ; elapsed = 00:01:21 . Memory (MB): peak = 2656.777 ; gain = 197.805
+Phase 6 Rip-up And Reroute | Checksum: 230691076
+
+Time (s): cpu = 00:01:43 ; elapsed = 00:01:21 . Memory (MB): peak = 2656.777 ; gain = 197.805
+
+Phase 7 Delay and Skew Optimization
+
+Phase 7.1 Delay CleanUp
+Phase 7.1 Delay CleanUp | Checksum: 230691076
+
+Time (s): cpu = 00:01:43 ; elapsed = 00:01:21 . Memory (MB): peak = 2656.777 ; gain = 197.805
+
+Phase 7.2 Clock Skew Optimization
+Phase 7.2 Clock Skew Optimization | Checksum: 230691076
+
+Time (s): cpu = 00:01:43 ; elapsed = 00:01:21 . Memory (MB): peak = 2656.777 ; gain = 197.805
+Phase 7 Delay and Skew Optimization | Checksum: 230691076
+
+Time (s): cpu = 00:01:43 ; elapsed = 00:01:21 . Memory (MB): peak = 2656.777 ; gain = 197.805
+
+Phase 8 Post Hold Fix
+
+Phase 8.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.371  | TNS=0.000  | WHS=0.011  | THS=0.000  |
+
+Phase 8.1 Hold Fix Iter | Checksum: 23ef9409b
+
+Time (s): cpu = 00:01:45 ; elapsed = 00:01:22 . Memory (MB): peak = 2656.777 ; gain = 197.805
+Phase 8 Post Hold Fix | Checksum: 23ef9409b
+
+Time (s): cpu = 00:01:45 ; elapsed = 00:01:22 . Memory (MB): peak = 2656.777 ; gain = 197.805
+
+Phase 9 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 2.06092 %
+  Global Horizontal Routing Utilization  = 2.87528 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 9 Route finalize | Checksum: 23ef9409b
+
+Time (s): cpu = 00:01:45 ; elapsed = 00:01:22 . Memory (MB): peak = 2656.777 ; gain = 197.805
+
+Phase 10 Verifying routed nets
+
+ Verification completed successfully
+Phase 10 Verifying routed nets | Checksum: 23ef9409b
+
+Time (s): cpu = 00:01:45 ; elapsed = 00:01:22 . Memory (MB): peak = 2656.777 ; gain = 197.805
+
+Phase 11 Depositing Routes
+Phase 11 Depositing Routes | Checksum: 28f973f22
+
+Time (s): cpu = 00:01:49 ; elapsed = 00:01:25 . Memory (MB): peak = 2656.777 ; gain = 197.805
+
+Phase 12 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.371  | TNS=0.000  | WHS=0.011  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 12 Post Router Timing | Checksum: 28f973f22
+
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:27 . Memory (MB): peak = 2656.777 ; gain = 197.805
+--------------------------------------------------------
+|Incremental Routing Reuse Summary                      |
+--------------------------------------------------------
+|Type                     | Count    | Percentage       |
+--------------------------------------------------------
+|Fully reused nets        |     21331|            89.73 |
+|Partially reused nets    |         0|             0.00 |
+|Non-reused nets          |      2442|            10.27 |
+--------------------------------------------------------
+INFO: [Route 35-16] Router Completed Successfully
+------------------------------------
+Incremental Router Runtime Summary: 
+------------------------------------
+   Initialization time: 88.225 Secs
+   Incremental Router time: 0 Secs
+Ending Incremental Route Task | Checksum: 117715836
+
+Time (s): cpu = 00:01:52 ; elapsed = 00:01:28 . Memory (MB): peak = 2656.777 ; gain = 197.805
+antenna Cleanup:Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2656.777 ; gain = 0.000
+
+Reference - Incremental Comparison Summary
+
+1. Comparison with Reference Run
+--------------------------------
+
++-----------------+---------------------------+---------------------------+---------------------------+
+|                 |          WNS(ns)          |  Runtime(elapsed)(hh:mm)  |    Runtime(cpu)(hh:mm)    |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| synth_design    |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| opt_design      |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| read_checkpoint |             |             |             |     < 1 min |             |       00:01 |
+| place_design    |       0.569 |       0.290 |       00:01 |     < 1 min |       00:02 |       00:01 |
+| phys_opt_design |       0.569 |       0.290 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| route_design    |       0.325 |       0.371 |       00:01 |       00:01 |       00:02 |       00:02 |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+INFO: [Common 17-83] Releasing license: Implementation
+120 Infos, 67 Warnings, 1 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:02:00 ; elapsed = 00:01:33 . Memory (MB): peak = 2656.777 ; gain = 197.805
+INFO: [Vivado 12-24828] Executing command : report_drc -file block_design_wrapper_drc_routed.rpt -pb block_design_wrapper_drc_routed.pb -rpx block_design_wrapper_drc_routed.rpx
+Command: report_drc -file block_design_wrapper_drc_routed.rpt -pb block_design_wrapper_drc_routed.pb -rpx block_design_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file D:/Vivado/AudioFilters/AudioFilters.runs/impl_1/block_design_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [Vivado 12-24828] Executing command : report_methodology -file block_design_wrapper_methodology_drc_routed.rpt -pb block_design_wrapper_methodology_drc_routed.pb -rpx block_design_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file block_design_wrapper_methodology_drc_routed.rpt -pb block_design_wrapper_methodology_drc_routed.pb -rpx block_design_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file D:/Vivado/AudioFilters/AudioFilters.runs/impl_1/block_design_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 2656.777 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file block_design_wrapper_timing_summary_routed.rpt -pb block_design_wrapper_timing_summary_routed.pb -rpx block_design_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+report_timing_summary: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 2656.777 ; gain = 0.000
+INFO: [Vivado 12-24838] Running report commands "report_incremental_reuse, report_route_status" in parallel.
+Running report generation with 2 threads.
+INFO: [Vivado 12-24828] Executing command : report_route_status -file block_design_wrapper_route_status.rpt -pb block_design_wrapper_route_status.pb
+INFO: [Vivado 12-24828] Executing command : report_incremental_reuse -file block_design_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado 12-24828] Executing command : report_power -file block_design_wrapper_power_routed.rpt -pb block_design_wrapper_power_summary_routed.pb -rpx block_design_wrapper_power_routed.rpx
+Command: report_power -file block_design_wrapper_power_routed.rpt -pb block_design_wrapper_power_summary_routed.pb -rpx block_design_wrapper_power_routed.rpx
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+136 Infos, 69 Warnings, 1 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2656.777 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file block_design_wrapper_clock_utilization_routed.rpt
+INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file block_design_wrapper_bus_skew_routed.rpt -pb block_design_wrapper_bus_skew_routed.pb -rpx block_design_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+generate_parallel_reports: Time (s): cpu = 00:00:40 ; elapsed = 00:00:28 . Memory (MB): peak = 2656.777 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2656.777 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2656.777 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.082 . Memory (MB): peak = 2656.777 ; gain = 0.000
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.249 . Memory (MB): peak = 2656.777 ; gain = 0.000
+Wrote PlaceStorage: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2656.777 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2656.777 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2656.777 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 2656.777 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado/AudioFilters/AudioFilters.runs/impl_1/block_design_wrapper_routed.dcp' has been generated.
+INFO: [Memdata 28-167] Found XPM memory block block_design_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to auto. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the block_design_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
+INFO: [Memdata 28-208] The XPM instance: <block_design_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <block_design_i/axi_dma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <block_design_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <block_design_i/axi_dma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-167] Found XPM memory block block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to auto. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to auto. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the block_design_i/PmodOLED_0/inst/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
+Command: write_bitstream -force block_design_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Integrating Hard IP ELF/MEM with the PDI.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./block_design_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+155 Infos, 69 Warnings, 1 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:34 ; elapsed = 00:00:27 . Memory (MB): peak = 3120.129 ; gain = 463.352
+INFO: [Common 17-206] Exiting Vivado at Mon May 18 09:09:05 2026...
