@@ -8,14 +8,15 @@ The onboard OLED display provides feedback on the active audio filter, while the
 ## Key Features
 * **Microblaze RISC-V soft-core processor**
 * **Audio Pass-Through & Processing:** Interfacing with the onboard ADAU1761 audio codec.
-* **7 Selectable Audio Effects:**
+* **8 Selectable Audio Effects:**
     * Low Pass Filter
     * High Pass Filter
-    * Channel Swap (Left/Right)
-    * Reverb
-    * Karaoke
-    * 8-bit Bitcrusher
+    * Distortion
     * Echo
+    * Karaoke
+    * Channel Swap (Left/Right)
+    * 8-bit Bitcrusher
+    * Reverb
 * **OLED Integration:** Visual feedback displaying the currently active filter on the 128x32 integrated OLED display.
 * **Hardware Volume Control:** Volume up/down adjustments using push buttons.
 
@@ -32,15 +33,16 @@ The onboard OLED display provides feedback on the active audio filter, while the
 ## Controls & I/O Mapping
 
 ### Switches (Audio Filters)
-Toggle the slide switches (`SW0` - `SW6`) to enable the desired audio effect.
+Toggle the slide switches (`SW0` - `SW7`) to enable the desired audio effect.
 
 - **SW0** — Low Pass
 - **SW1** — High Pass
-- **SW2** — Channel Swap
-- **SW3** — Reverb
+- **SW2** — Distortion
+- **SW3** — Echo
 - **SW4** — Karaoke
-- **SW5** — 8-Bit (Bitcrusher)
-- **SW6** — Echo
+- **SW5** — Channel Swap
+- **SW6** — 8-Bit (Bitcrusher)
+- **SW7** — Reverb
 
 ### Push Buttons (Volume Control)
 | Button | Function |
