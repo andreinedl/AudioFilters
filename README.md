@@ -65,3 +65,6 @@ The integrated 128x32 OLED automatically updates to display:
     * Applies the respective DSP algorithms to the audio buffer.
     * Sends the modified audio buffer back to the codec.
     * Drives the OLED via SPI to update the user interface.
+
+## Block diagram
+![Vivado block diagram](https://i.imgur.com/cW9pwOU.png)
